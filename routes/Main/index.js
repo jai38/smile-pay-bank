@@ -7,7 +7,6 @@ router.get("/", (req, res) => {
   let allUsers = [];
   User.find().then((users) => {
     users.forEach((c) => {
-      console.log(c.balance);
       let currentUser = {
         customerID: c.customerID,
         account: c.account,

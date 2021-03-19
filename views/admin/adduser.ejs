@@ -23,60 +23,60 @@
             <span class="icon"></span>
             <!-- <span class="smilepay">SMILE PAY</span> -->
           </div>
-    <form class="flexbox d-flex flex-column block-example">
+    <form action="/addUser" method="POST" class="flexbox d-flex flex-column block-example">
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputFirst1"></label>
-                <input type="Number" class="form-control" placeholder="Customer Id"></input>
+                <input type="Number" class="form-control" name="customerID" id='customerID' placeholder="Customer Id"></input>
             </div>
             <div class="col-sm-6 my-1">
                 <label for="exampleInputLast1"></label>
-                <input required type="Number" class="form-control" placeholder="Account Number"></input>
+                <input required type="Number" class="form-control" name="account" id='account' placeholder="Account Number"></input>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputUser1"></label>
-                <input type="text" class="form-control" placeholder="Name"></input>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name"></input>
             </div>
             <div class="col-sm-6 my-1">
                 <label for="exampleInputAccountno"></label>
-                <input required type="text" class="form-control" placeholder="Gender"></input>
+                <input required type="text" class="form-control" name="gender" id="gender" placeholder="Gender"></input>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputpassword1"></label>
-                <input required type="text" class="form-control" placeholder="dd-mm-yyyy"></input>
+                <input required type="text" class="form-control" name="DOB" id="DOB" placeholder="dd-mm-yyyy"></input>
             </div>
             <div class="col-sm-6 my-1">
                 <label for="exampleInputconfirmPassword1"></label>
-                <input required type="Number" class="form-control" placeholder="Mobile Number"></input>
+                <input required type="Number" class="form-control" name="number" id="number" placeholder="Mobile Number"></input>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputemail1"></label>
-                <input required type="Number" class="form-control"style={Style.ebox} placeholder="Aadhar"></input>
+                <input required type="Number" class="form-control" name="aadhar" id="aadhar" placeholder="Aadhar"></input>
             </div>
             <div class="col-sm-6 my-1">
                 <label for="exampleInputconfirmPassword1"></label>
-                <input required type="Number" class="form-control" placeholder="PAN"></input>
+                <input required type="Number" class="form-control" name="pan" id="pan" placeholder="PAN"></input>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputemail1"></label>
-                <input required type="Number" class="form-control"style={Style.ebox} placeholder="Balance"></input>
+                <input required type="Number" class="form-control" name="totalAmount" id="totalAmount" placeholder="Balance"></input>
             </div>
         </div>
-        <div class="mx-sm-3 mb-2">
+        <!-- <div class="mx-sm-3 mb-2">
             <input class="form-check-input" type="checkbox"></input>
             <label required class="form-check-label" for="defaultCheck1">
             I agree to the T&C
             </label>
-        </div>
-        <button type="button" class="btn btn-primary btn-sm m-2">SIGNUP</button>
+        </div> -->
+        <button type="submit" class="btn btn-primary btn-sm m-2">SIGNUP</button>
     </form>
 </div>
 <div class="backgroundImgSecond"></div>
