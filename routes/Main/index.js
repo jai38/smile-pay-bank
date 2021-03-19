@@ -7,7 +7,6 @@ router.get("/", (req, res) => {
   let allUsers = [];
   User.find().then((users) => {
     users.forEach((c) => {
-      console.log(c.number);
       let currentUser = {
         customerID: c.customerID,
         account: c.account,
@@ -20,7 +19,6 @@ router.get("/", (req, res) => {
       };
       allUsers.push(currentUser);
     });
-    // console.log(allUsers);
     allUsers = JSON.stringify(allUsers);
     res.render("./Main/MainPage", { allUsers });
   });
