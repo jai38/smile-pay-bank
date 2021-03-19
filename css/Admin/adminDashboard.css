@@ -1,4 +1,18 @@
-@import url("./../adminDashboard/adminDashboard.css");
-.adminbox {
-  border: 10;
+@import url("./../Global/global.css");
+.floatbox {
+  background: linear-gradient(
+    to bottom right,
+    rgb(21, 36, 248),
+    rgb(11, 145, 255),
+    rgb(0, 195, 255)
+  );
+  height: 85vh;
+  width: 50vw;
+  position: "absolute";
+  border-radius: 5vh;
+  box-shadow: 1vh 1vw 2vh #203a4e;
+  z-index: 1;
+  top: 15vh;
+  left: "70%";
+  position: "relative";
 }
