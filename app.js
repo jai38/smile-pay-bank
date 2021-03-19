@@ -1,11 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const User = require("./Models/User");
 const dotenv = require("dotenv").config();
 const app = express();
 
 const db = process.env.DB_URL;
 mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
   .then(() => {
     console.log("MongoDB connected");
   })
@@ -35,6 +40,7 @@ app.use("/login/payPin", require("./routes/Login/payPin"));
 app.use("/updateUser", require("./routes/Admin/updateUser"));
 app.use("/addUser", require("./routes/Admin/addUser"));
 app.use("/adminDashboard", require("./routes/Admin/adminDashboard"));
+app.use("/deleteUser", require("./routes/Admin/deleteUser"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, console.log(`Server is running on port ${PORT}`));

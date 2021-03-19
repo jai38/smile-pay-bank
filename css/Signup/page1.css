@@ -119,7 +119,7 @@
 .number input:valid + .label-number::after {
   transform: translateX(0%);
 }
-.email {
+.account {
   width: 65%;
   position: relative;
   top: 21vh;
@@ -128,7 +128,7 @@
   font-size: 3vh;
   overflow: hidden;
 }
-.email input {
+.account input {
   width: 100%;
   height: 100%;
   color: black;
@@ -140,7 +140,7 @@
   overflow: auto;
 }
 
-.email label {
+.account label {
   position: absolute;
   bottom: 0vh;
   left: 0%;
@@ -149,7 +149,7 @@
   pointer-events: none;
   border-bottom: 1px solid black;
 }
-.email label::after {
+.account label::after {
   content: "";
   position: absolute;
   left: 0vw;
@@ -160,22 +160,22 @@
   transform: translateX(-100%);
   transition: transform 0.8s ease;
 }
-.content-email {
+.content-account {
   position: absolute;
   bottom: 1vh;
   left: 0vw;
   transition: all 0.3s ease;
 }
-.email input:focus + .label-email .content-email,
-.email input:valid + .label-email .content-email {
+.account input:focus + .label-account .content-account,
+.account input:valid + .label-account .content-account {
   transform: translateY(-100%);
   font-size: 4vh;
   color: black;
 }
-.email input:focus + .label-email::after,
-.email input:valid + .label-email::after {
+.account input:focus + .label-account::after,
+.account input:valid + .label-account::after {
   transform: translateX(0%);
 }
-.email input::placeholder {
+.account input::placeholder {
   display: none;
 }
