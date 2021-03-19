@@ -1,0 +1,16 @@
+.floatBox {
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(
+      to bottom right,
+      rgb(21, 36, 248),
+      rgb(11, 145, 255),
+      rgb(0, 195, 255)
+    );
+    top: 7vh;
+    left: 14vw;
+    height: 85vh;
+    width: 70%;
+    border-radius: 5vh;
+    box-shadow: 1vh 1vw 2vh #203a4e;
+  }
