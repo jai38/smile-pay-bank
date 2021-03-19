@@ -9,9 +9,20 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  number: {
+  DOB: {
     type: String,
-    required: true,
+  },
+  gender: {
+    type: String,
+  },
+  customerID: {
+    type: String,
+  },
+  aadhar: {
+    type: String,
+  },
+  pan: {
+    type: String,
   },
   account: {
     type: String,

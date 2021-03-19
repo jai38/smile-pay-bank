@@ -13,6 +13,15 @@
   </head>
 
   <body onload="resetData()">
+    <input
+      type="text"
+      name="allUsers"
+      id="allUsers"
+      style="display: none"
+      value="<% if(typeof allUsers != 'undefined'){ %>
+        <%= allUsers %> 
+    <% } %> "
+    />
     <div class="background">
       <div class="backgroundImgFirst"></div>
       <div class="floatBox">
