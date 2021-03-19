@@ -39,6 +39,7 @@ app.use("/login/paymentUndone", require("./routes/Login/paymentUndone"));
 app.use("/login/payPin", require("./routes/Login/payPin"));
 app.use("/updateUser", require("./routes/Admin/updateUser"));
 app.use("/addUser", require("./routes/Admin/addUser"));
+app.use("/adminDashboard", require("./routes/Admin/adminDashboard"));
 app.use("/deleteUser", require("./routes/Admin/deleteUser"));
 
 const PORT = process.env.PORT || 3000;
