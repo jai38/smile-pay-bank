@@ -14,6 +14,7 @@ updateUser = () => {
         <th scope="col">${c.number}</th>
         <th scope="col">${c.aadhar}</th>
         <th scope="col">${c.pan}</th>
+        <th scope="col">${c.balance}</th>
         <th scope="col"><button>UPDATE</button></th>
       </tr>`;
   });
