@@ -14,3 +14,9 @@
     border-radius: 5vh;
     box-shadow: 1vh 1vw 2vh #203a4e;
   }
+  .flexbox{
+      position: relative;
+      left: 20%;
+      width: 70%;
+      top: 20%
+  }

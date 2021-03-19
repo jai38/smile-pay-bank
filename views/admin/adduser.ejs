@@ -6,60 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | addUser </title>
     <link rel="stylesheet" href="/css/Admin/adduser.css" type="text/css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    
     <!-- <link rel="stylesheet" href="/css/Signup/page1.css" type="text/css"> -->
 </head>
 <body>
-    <div class = "background">
-        <div class = "backgroundImgFirst"></div>
-        <div class="floatBox">
-            <h2 class = "signupHeading">Personal Details: </h2>
-            <form action="/signup/first" method="POST">
-                <%- include('../partials/messages') %>
-                <div class="signupForm">
-                    <input 
-                    id = 'name' 
-                    type="text" 
-                    name="name" 
-                    placeholder="Name"
-                    autocomplete="off"
-                    value="<%= typeof name != 'undefined' ? name : '' %>" 
-                    required />
-                        <label for="name" class="label-name">
-                            <span class="content-name">Name</span>
-                        </label>
-                </div>
-                <div class = "number">
-                        <input 
-                        id = 'number' 
-                        type="number" 
-                        name="number" 
-                        placeholder="Mobile No."
-                        autocomplete="off" 
-                        value="<%= typeof number != 'undefined' ? number : '' %>" 
-                        required />
-                        <label for="number" class="label-number">
-                            <span class="content-number">Mobile no</span>
-                        </label>
-                </div>
-                <div class = "email">
-                        <input 
-                        id = 'email' 
-                        type="email" 
-                        name="email" 
-                        placeholder="Email"
-                        autocomplete="off" 
-                        value="<%= typeof email != 'undefined' ? email : '' %>" 
-                        required />
-                        <label for="email" class="label-email">
-                            <span class="content-email">Email id</span>
-                        </label>
-                </div>
-                    <a href="/" border-color="black" class="back"><span>Back</span></a>
-                    <button id = 'submit1' type="submit" border-color="black" class="next" onclick="getDetails()"><span>Next</span></a>
-            </form>
+    <div class="floatBox">
+    <form class="flexbox d-flex flex-column block-example">
+        <div class="form-row">
+            <div class="col-sm-6 my-1">
+                <label for="exampleInputFirst1"></label>
+                <input type="text" class="form-control" placeholder="First Name"></input>
+            </div>
+            <div class="col-sm-6 my-1">
+                <label for="exampleInputLast1"></label>
+                <input required type="text" class="form-control" placeholder="Last "></input>
+            </div>
         </div>
-        <div class="backgroundImgSecond"></div>
-    </div>
-    <script src="./../../clientJS/Signup/page1.js"></script>
+        <div class="form-row">
+            <div class="col-sm-6 my-1">
+                <label for="exampleInputUser1"></label>
+                <input type="text" class="form-control" placeholder="User "></input>
+            </div>
+            <div class="col-sm-6 my-1">
+                <label for="exampleInputAccountno"></label>
+                <input required type="number" class="form-control" ></input>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-6 my-1">
+                <label for="exampleInputpassword1"></label>
+                <input required type="password" class="form-control" placeholder="password"></input>
+            </div>
+            <div class="col-sm-6 my-1">
+                <label for="exampleInputconfirmPassword1"></label>
+                <input required type="password" class="form-control" placeholder="Confirm password"></input>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-6 my-1">
+                <label for="exampleInputemail1"></label>
+                <input required type="email" class="form-control"style={Style.ebox} placeholder="@example.com"></input>
+            </div>
+        </div>
+        <div class="mx-sm-3 mb-2">
+            <input class="form-check-input" type="checkbox"></input>
+            <label required class="form-check-label" for="defaultCheck1">
+            I agree to the T&C
+            </label>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm m-2">SIGNUP</button>
+    </form>
+</div>
 </body>
 </html>
