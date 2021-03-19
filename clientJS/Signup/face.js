@@ -50,10 +50,7 @@ async function capture() {
   console.log(thirdDetails);
   document.getElementById("name").value = firstDetails.name;
   document.getElementById("number").value = firstDetails.number;
-  document.getElementById("email").value = firstDetails.email;
-  document.getElementById("account").value = secondDetails.account;
-  document.getElementById("aadhar").value = secondDetails.aadhar;
-  document.getElementById("pan").value = secondDetails.pan;
+  document.getElementById("account").value = firstDetails.account;
   document.getElementById("username").value = thirdDetails.username;
   document.getElementById("password").value = thirdDetails.password;
   document.getElementById("pin").value = thirdDetails.pin;

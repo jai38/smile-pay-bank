@@ -1,11 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const User = require("./Models/User");
 const dotenv = require("dotenv").config();
 const app = express();
 
 const db = process.env.DB_URL;
 mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
   .then(() => {
     console.log("MongoDB connected");
   })

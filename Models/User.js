@@ -9,10 +9,6 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  email: {
-    type: String,
-    required: true,
-  },
   number: {
     type: String,
     required: true,
@@ -20,12 +16,6 @@ const UserSchema = new mongoose.Schema({
   account: {
     type: String,
     required: true,
-  },
-  aadhar: {
-    type: String,
-  },
-  pan: {
-    type: String,
   },
   username: {
     type: String,
