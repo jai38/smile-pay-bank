@@ -14,6 +14,7 @@ deleteUser = () => {
         <th scope="col">${c.number}</th>
         <th scope="col">${c.aadhar}</th>
         <th scope="col">${c.pan}</th>
+        <th scope="col">${c.balance}</th>
         <th scope="col"><button>DELETE</button></th>
       </tr>`;
   });

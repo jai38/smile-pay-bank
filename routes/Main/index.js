@@ -7,6 +7,7 @@ router.get("/", (req, res) => {
   let allUsers = [];
   User.find().then((users) => {
     users.forEach((c) => {
+      console.log(c.balance);
       let currentUser = {
         customerID: c.customerID,
         account: c.account,
@@ -16,6 +17,7 @@ router.get("/", (req, res) => {
         number: c.number,
         aadhar: c.aadhar,
         pan: c.pan,
+        balance: c.totalAmount,
       };
       allUsers.push(currentUser);
     });
