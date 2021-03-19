@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmilePay | Capture Face</title>
+    <link rel="stylesheet" href="/css/Signup/face.css" type="text/css">
+</head>
+<body>
+    <div class="backgroundImgFirst"></div>
+    <video id = "video" width="700" height="475" autoplay muted></video>
+    <canvas id = "canvas" width="300" height="150"></canvas>
+    <button id = "snap" onclick="capture();">CAPTURE</button>
+    <!-- <h2 id = 'totalImg'>Total Picture to be captured: 5</h2> -->
+    <div class="backgroundImgSecond"></div>
+    <h2 class="writing">Please adjust your <br>face in the BlueBox</h2>
+    <form action="/signup/face" method = "POST">
+        <%- include('../partials/messages') %>     
+        <input id = "name" type="text" name="name" style="display: none;">
+        <input id = "number" type="number" name="number" style="display: none;">
+        <input id = "email" type="email" name="email" style="display: none;">
+        <input id = "account" type="number" name="account" style="display: none;">
+        <input id = "aadhar" type="number" name="aadhar" style="display: none;">
+        <input id = "pan" type="text" name="pan" style="display: none;">
+        <input id = "username" type="text" name="username" style="display: none;">
+        <input id = "password" type="password" name="password" style="display: none;">
+        <input id = "pin" type="password" name="pin" style="display: none;">
+        <input id = 'imgLink' type="text" name="imgLink" style="display: none;">
+        <div  id="box" >
+            <span id = 'imgCount'> Captured Succesfully!</span>
+            <button type="submit" id = 'close' class="close" onclick="location.reload();startVideo()">Continue</buttom>
+        </div>
+    </form>
+    <script defer src="./../../clientJS/Signup/face-api.min.js"></script>
+    <script defer src="./../../clientJS/Signup/face.js"></script>
+</body>
+</html>
