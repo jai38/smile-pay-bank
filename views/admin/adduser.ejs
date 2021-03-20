@@ -27,47 +27,47 @@
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputFirst1"></label>
-                <input type="Number" class="form-control" name="customerID" id='customerID' placeholder="Customer Id"></input>
+                <input type="Number" class="form-control" name="customerID" id='customerID' placeholder="Customer Id" value="<%= typeof customerID != 'undefined' ? customerID : '' %>" ></input>
             </div>
             <div class="col-sm-6 my-1">
                 <label for="exampleInputLast1"></label>
-                <input required type="Number" class="form-control" name="account" id='account' placeholder="Account Number"></input>
+                <input required type="Number" class="form-control" name="account" id='account' placeholder="Account Number" value="<%= typeof account != 'undefined' ? account : '' %>"></input>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputUser1"></label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Name"></input>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="<%= typeof name != 'undefined' ? name : '' %>"></input>
             </div>
             <div class="col-sm-6 my-1">
                 <label for="exampleInputAccountno"></label>
-                <input required type="text" class="form-control" name="gender" id="gender" placeholder="Gender"></input>
+                <input required type="text" class="form-control" name="gender" id="gender" placeholder="Gender" value="<%= typeof gender != 'undefined' ? gender : '' %>"></input>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputpassword1"></label>
-                <input required type="text" class="form-control" name="DOB" id="DOB" placeholder="dd-mm-yyyy"></input>
+                <input required type="text" class="form-control" name="DOB" id="DOB" placeholder="dd-mm-yyyy" value="<%= typeof DOB != 'undefined' ? DOB : '' %>"></input>
             </div>
             <div class="col-sm-6 my-1">
                 <label for="exampleInputconfirmPassword1"></label>
-                <input required type="Number" class="form-control" name="number" id="number" placeholder="Mobile Number"></input>
+                <input required type="Number" class="form-control" name="number" id="number" placeholder="Mobile Number" value="<%= typeof number != 'undefined' ? number : '' %>"></input>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputemail1"></label>
-                <input required type="Number" class="form-control" name="aadhar" id="aadhar" placeholder="Aadhar"></input>
+                <input required type="Number" class="form-control" name="aadhar" id="aadhar" placeholder="Aadhar" value="<%= typeof aadhar != 'undefined' ? aadhar : '' %>"></input>
             </div>
             <div class="col-sm-6 my-1">
                 <label for="exampleInputconfirmPassword1"></label>
-                <input required type="Number" class="form-control" name="pan" id="pan" placeholder="PAN"></input>
+                <input required type="Number" class="form-control" name="pan" id="pan" placeholder="PAN" value="<%= typeof pan != 'undefined' ? pan : '' %>"></input>
             </div>
         </div>
         <div class="form-row">
             <div class="col-sm-6 my-1">
                 <label for="exampleInputemail1"></label>
-                <input required type="Number" class="form-control" name="totalAmount" id="totalAmount" placeholder="Balance"></input>
+                <input required type="Number" class="form-control" name="totalAmount" id="totalAmount" placeholder="Balance" value="<%= typeof totalAmount != 'undefined' ? totalAmount : '' %>"></input>
             </div>
         </div>
         <!-- <div class="mx-sm-3 mb-2">
