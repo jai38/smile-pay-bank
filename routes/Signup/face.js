@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
   res.render("./Signup/face");
 });
 router.post("/", (req, res) => {
-  let { name, number, account, username, password, pin, imgLink } = req.body;
+  let { account, username, password, pin, imgLink } = req.body;
   let errors = [];
   password = getHashed(password);
   pin = getHashed(pin);

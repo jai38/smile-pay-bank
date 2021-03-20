@@ -1,8 +1,20 @@
 const express = require("express");
 const User = require("../../Models/User");
 const localStorage = require("local-storage");
+const nodemailer = require("nodemailer");
+const dotenv = require("dotenv").config();
+const fs = require("fs");
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.user,
+    pass: process.env.pass,
+  },
+});
 const router = express.Router();
-
+const generateOTP = () => {
+  return Math.floor(Math.random() * (999999 - 100000 + 1)) + 1000;
+};
 router.get("/", (req, res) => {
   //for clearing all users
   // User.deleteMany({},(err) => User.count((err,num) => console.log(num)));
@@ -36,6 +48,21 @@ router.post("/", (req, res) => {
           res.render("Signup/page1", { errors });
         } else {
           if (user.email == email && user.name == name) {
+            let OTP = generateOTP();
+            fs.writeFileSync("otp.txt", OTP.toString(16));
+            let mailOptions = {
+              from: process.env.user,
+              to: email,
+              subject: "OTP",
+              text: `Your OTP for registeration is ${OTP} please do not share this with anyone. \nThank you for using Smile-pay`,
+            };
+            transporter.sendMail(mailOptions, (err, info) => {
+              if (err) {
+                console.log(err);
+              } else {
+                console.log("Email Sent: " + info.response);
+              }
+            });
             errors.push({ msg: "OTP is sent on your registered Email ID" });
             res.render("Signup/page2", { errors });
           } else {
