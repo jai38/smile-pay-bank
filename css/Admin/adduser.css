@@ -1,50 +1,49 @@
 @import url("./../Global/global.css");
 .floatBox {
-    position: absolute;
-    z-index: 1;
-    background: linear-gradient(
-      to bottom right,
-      rgb(21, 36, 248),
-      rgb(11, 145, 255),
-      rgb(0, 195, 255)
-    );
-    top: 7vh;
-    left: 14vw;
-    height: 85vh;
-    width: 70%;
-    border-radius: 5vh;
-    box-shadow: 1vh 1vw 2vh #203a4e;
-  }
-  .flexbox{
-      position: relative;
-      left: 15%;
-      width: 70%;
-      top: 25%
-  }
-  .flexbox input {
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom right,
+    rgb(21, 36, 248),
+    rgb(11, 145, 255),
+    rgb(0, 195, 255)
+  );
+  top: 7vh;
+  left: 14vw;
+  height: 85vh;
+  width: 70%;
+  border-radius: 5vh;
+  box-shadow: 1vh 1vw 2vh #203a4e;
+}
+.flexbox {
+  position: relative;
+  left: 15%;
+  width: 70%;
+  top: 25%;
+}
+/* .flexbox input {
     background-color: #262626;
-}
+} */
 .flexbox input::after {
-    color: #262626;
+  color: #262626;
 }
-.flexbox input::placeholder {
-    color: white
-}
+/* .flexbox input::placeholder {
+  color: white;
+} */
 
-  /* .logo {
+/* .logo {
     position: absolute;
     top: 10%;
     left: -5%;
     width: 50%;
     height: 70%;
   } */
-  .icon {
-    position: absolute;
-    left: 35%;
-    width: 30%;
-    height: 30%;
-    top: 2%;
-    background-image: url(/css/images/Main/logo1.png);
-    background-size: 100% 100%;
-  }
-  
+.icon {
+  position: absolute;
+  left: 35%;
+  width: 30%;
+  height: 30%;
+  top: 2%;
+  background-image: url(/css/images/Main/logo1.png);
+  background-size: 100% 100%;
+}

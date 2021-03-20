@@ -3,11 +3,9 @@ const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
   },
   number: {
     type: String,
-    required: true,
   },
   DOB: {
     type: String,
@@ -26,27 +24,19 @@ const UserSchema = new mongoose.Schema({
   },
   account: {
     type: String,
-    required: true,
   },
-  username: {
-    type: String,
-    required: true,
-  },
+  username: {},
   password: {
     type: String,
-    required: true,
   },
   pin: {
     type: String,
-    required: true,
   },
   totalAmount: {
     type: Number,
-    required: true,
   },
   imgLink: {
     type: String,
-    required: true,
   },
 });
 
