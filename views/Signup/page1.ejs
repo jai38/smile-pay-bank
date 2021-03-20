@@ -26,17 +26,17 @@
                             <span class="content-name">Name</span>
                         </label>
                 </div>
-                <div class = "number">
+                <div class = "email">
                         <input 
-                        id = 'number' 
-                        type="number" 
-                        name="number" 
-                        placeholder="Mobile No."
+                        id = 'email' 
+                        type="email" 
+                        name="email" 
+                        placeholder="Email"
                         autocomplete="off" 
-                        value="<%= typeof number != 'undefined' ? number : '' %>" 
+                        value="<%= typeof email != 'undefined' ? email : '' %>" 
                         required />
-                        <label for="number" class="label-number">
-                            <span class="content-number">Mobile no</span>
+                        <label for="email" class="label-email">
+                            <span class="content-email">Email</span>
                         </label>
                 </div>
                 <div class = "account">
@@ -46,7 +46,7 @@
                         name="account" 
                         placeholder="account"
                         autocomplete="off" 
-                        value="<%= typeof email != 'undefined' ? email : '' %>" 
+                        value="<%= typeof account != 'undefined' ? account : '' %>" 
                         required />
                         <label for="account" class="label-account">
                             <span class="content-account">Account No</span>

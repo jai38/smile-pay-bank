@@ -10,23 +10,23 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const { name, number, account } = req.body;
+  const { name, email, account } = req.body;
   let errors = [];
-  if (!name || !number || !account) {
+  if (!name || !email || !account) {
     errors.push({ msg: "Please fill all the details" });
   }
-  if (number.length != 10) {
-    errors.push({
-      msg: "Please enter valid mobile number(without country code or 0)",
-    });
-  }
+  // if (email.length != 10) {
+  //   errors.push({
+  //     msg: "Please enter valid email address",
+  //   });
+  // }
   if (account.length != 10) {
     errors.push({
       msg: "Please enter 10 digit account number",
     });
   }
   if (errors.length > 0) {
-    res.render("Signup/page1", { errors, name, number, account });
+    res.render("Signup/page1", { errors, name, email, account });
     console.log(errors);
   } else {
     User.findOne({ account }).then((user) => {
@@ -35,27 +35,27 @@ router.post("/", (req, res) => {
           errors.push({ msg: "You have already registered please login" });
           res.render("Signup/page1", { errors });
         } else {
-          if (user.number == number && user.name == name) {
-            errors.push({ msg: "OTP is sent on your mobile number" });
+          if (user.email == email && user.name == name) {
+            errors.push({ msg: "OTP is sent on your registered Email ID" });
             res.render("Signup/page2", { errors });
           } else {
             if (user.name != name) {
               errors.push({
                 msg: "Name is incorrect",
               });
-              res.render("Signup/page1", { errors, account, name, number });
+              res.render("Signup/page1", { errors, account, name, email });
             } else {
               errors.push({
                 msg:
-                  "This Mobile number is not registered with your bank account",
+                  "This Email address is not registered with your bank account",
               });
-              res.render("Signup/page1", { errors, account, name, number });
+              res.render("Signup/page1", { errors, account, name, email });
             }
           }
         }
       } else {
         errors.push({ msg: "Account number is incorrect" });
-        res.render("Signup/page1", { errors, account, name, number });
+        res.render("Signup/page1", { errors, account, name, email });
       }
     });
   }

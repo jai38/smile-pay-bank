@@ -63,7 +63,7 @@
 .signupForm input:valid + .label-name::after {
   transform: translateX(0%);
 }
-.number {
+.email {
   width: 65%;
   position: relative;
   top: 18vh;
@@ -72,7 +72,7 @@
   font-size: 3vh;
   overflow: hidden;
 }
-.number input {
+.email input {
   width: 100%;
   height: 50%;
   padding-top: 6vh;
@@ -83,7 +83,7 @@
   overflow: auto;
 }
 
-.number label {
+.email label {
   position: absolute;
   bottom: 0vh;
   left: 0%;
@@ -92,7 +92,7 @@
   pointer-events: none;
   border-bottom: 1px solid black;
 }
-.number label::after {
+.email label::after {
   content: "";
   position: absolute;
   left: 0vw;
@@ -103,14 +103,14 @@
   transform: translateX(-100%);
   transition: transform 0.8s ease;
 }
-.content-number {
+.content-email {
   position: absolute;
   bottom: 1vh;
   left: 0vw;
   transition: all 0.3s ease;
 }
-.number input:focus + .label-number .content-number,
-.number input:valid + .label-number .content-number {
+.email input:focus + .label-email .content-email,
+.email input:valid + .label-email .content-email {
   transform: translateY(-100%);
   font-size: 4vh;
   color: black;

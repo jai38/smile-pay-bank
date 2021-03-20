@@ -13,6 +13,9 @@ const UserSchema = new mongoose.Schema({
   gender: {
     type: String,
   },
+  email: {
+    type: String,
+  },
   customerID: {
     type: String,
   },
