@@ -16,13 +16,13 @@
   box-shadow: 1vh 1vw 2vh #203a4e;
 }
 .flexbox {
-  position:absolute;
+  position: absolute;
   left: 15%;
   width: 70%;
-  top: 25%;
+  top: 20%;
 }
 .flexbox input {
-    background-color: #262626;
+  background-color: #0a0a0a;
 }
 .flexbox input::placeholder::after {
   color: white !important;
@@ -31,32 +31,16 @@
   color: white !important;
 }
 
-/* .logo {
-    position: absolute;
-    top: 10%;
-    left: -5%;
-    width: 50%;
-    height: 70%;
-  } */
 .icon {
   position: absolute;
   left: 35%;
+  top: -2%;
   width: 30%;
   height: 30%;
-  top: 2%;
   background-image: url(/css/images/Main/logo1.png);
   background-size: 100% 100%;
 }
-/* .alert {
-  position: absolute;
-  top: -5vh;
-  left: -11.5vw;
-  width: 100%;
-  background-color: rgb(253, 2, 2);
-  font-size: 20px;
-  padding: 2vh;
-  color: #ffffff;
-} */
+
 .alert {
   position: absolute;
   top: -5vh;
@@ -65,5 +49,8 @@
   background-color: rgb(253, 2, 2);
   font-size: 20px;
   padding: 2vh;
+  color: #ffffff;
+}
+label {
   color: #ffffff;
 }
