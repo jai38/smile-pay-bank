@@ -9,7 +9,7 @@ router.post("/", (req, res) => {
   const {
     customerID,
     name,
-    number,
+    email,
     aadhar,
     pan,
     account,
@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
     return {
       customerID,
       name,
-      number,
+      email,
       aadhar,
       pan,
       account,
@@ -31,10 +31,7 @@ router.post("/", (req, res) => {
       errors,
     };
   };
-  if (number.length != 10) {
-    errors.push({ msg: "Number should be of 10 digit" });
-    res.render("./Admin/addUser", getData());
-  } else if (aadhar.length != 12) {
+  if (aadhar.length != 12) {
     errors.push({ msg: "Aadhar should be of 12 digit" });
     res.render("./Admin/addUser", getData());
   } else if (pan.length != 10) {
@@ -61,7 +58,7 @@ router.post("/", (req, res) => {
       const user = new User({
         customerID,
         name,
-        number,
+        email,
         aadhar,
         pan,
         account,
