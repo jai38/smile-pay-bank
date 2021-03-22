@@ -49,11 +49,11 @@ router.post("/", (req, res) => {
         } else {
           if (user.email == email && user.name == name) {
             let OTP = generateOTP();
-            fs.writeFileSync("otp.txt", OTP.toString(16));
+            fs.writeFileSync(`${account}.txt`, OTP.toString(16));
             let mailOptions = {
               from: process.env.user,
               to: email,
-              subject: "OTP",
+              subject: "Smile Pay",
               text: `Your OTP for registeration is ${OTP} please do not share this with anyone. \nThank you for using Smile-pay`,
             };
             transporter.sendMail(mailOptions, (err, info) => {

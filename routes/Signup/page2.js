@@ -8,8 +8,8 @@ router.get("/", (req, res) => {
 });
 router.post("/", async (req, res) => {
   let errors = [];
-  const OriginalOTP = parseInt(fs.readFileSync("otp.txt", "utf-8"), 16);
-  const { otp } = req.body;
+  const { otp, account } = req.body;
+  const OriginalOTP = parseInt(fs.readFileSync(`${account}.txt`, "utf-8"), 16);
   if (!otp) {
     errors.push({ msg: "Please fill all the details" });
     res.render("Signup/page2", { otp, errors });
