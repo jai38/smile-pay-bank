@@ -11,12 +11,18 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="./../../css/Admin/updateUser.css"
+      type="text/css"
+    />
     <script src="./../../clientJS/Admin/updateUser.js"></script>
   </head>
   <body onload="updateUser()">
-    <table class="table table-dark table-hover table-sm m-4" style="width: 75%">
-      <thead class="thead-light">
-        <tr>
+    <h4 class="updateUserHeading">SMILE PAY BANK</h4>
+    <table class="table table-striped table-dark" style="width: 80%">
+      <thead>
+        <tr class="table-primary" class="">
           <th scope="col">Customer ID</th>
           <th scope="col">Account</th>
           <th scope="col">Name</th>
@@ -29,7 +35,6 @@
           <th scope="col">UPDATE</th>
         </tr>
       </thead>
-
       <tbody id="tableData"></tbody>
     </table>
     <script

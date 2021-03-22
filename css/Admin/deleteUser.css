@@ -1,0 +1,24 @@
+body {
+  background: linear-gradient(
+    to bottom right,
+    rgb(21, 36, 248),
+    rgb(11, 145, 255),
+    rgb(0, 195, 255)
+  );
+}
+.deleteUserHeading {
+  position: relative;
+  align-items: center;
+  top: 5%;
+  left: 40%;
+  font-size: 220%;
+  color: #000;
+}
+table {
+  position: relative;
+  top: 40%;
+  left: 12%;
+}
+a {
+  position: relative;
+}

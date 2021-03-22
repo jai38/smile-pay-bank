@@ -14,7 +14,7 @@
   z-index: 1;
   top: 15vh;
   left: 5%;
-  position: "relative";
+  position: absolute;
   justify-content: center;
   align-items: center;
 }
@@ -23,7 +23,7 @@
   text-decoration: none !important;
   color: rgb(233, 243, 252) !important;
   font-size: 35 px;
-  font-weight:450;
+  font-weight: 450;
   position: relative;
   top: 55%;
   left: 23%;
@@ -54,4 +54,3 @@
   font-size: 140%;
   color: white;
 }
-
