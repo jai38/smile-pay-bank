@@ -1,4 +1,4 @@
 const getData = () => {
   const allUsers = document.getElementById("allUsers").value;
-  localStorage.setItem("allUsers", allUsers);
+  if (allUsers.length >= 10) localStorage.setItem("allUsers", allUsers);
 };
