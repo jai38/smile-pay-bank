@@ -25,11 +25,11 @@
     background-color: #262626;
 }
 .flexbox input::after {
-  background-color: #262626;
+  color: #262626 !important;
 }
 
-.flexbox input::placeholder {
-  color: white;
+.flexbox input::placeholder::after {
+  color: white !important;
 }
 
 /* .logo {
