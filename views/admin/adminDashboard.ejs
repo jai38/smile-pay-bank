@@ -16,8 +16,16 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="./../../clientJS/Admin/adminDashboard.js"></script>
   </head>
-  <body>
+  <body onload="getData()">
+    <input
+      type="text"
+      id="allUsers"
+      name="allUsers"
+      value="<%= typeof allUsers != 'undefined' ? allUsers : '' %>"
+      style="display: none"
+    />
     <div class="background">
       <div class="backgroundImgFirst"></div>
       <div class="floatBox">

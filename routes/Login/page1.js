@@ -24,21 +24,47 @@ router.post("/", (req, res) => {
 
   if (errors.length > 0) {
     res.render("Login/page1", { errors, username, password });
-  } else
-    User.findOne({ username: username }).then((user) => {
+  } else {
+    User.findOne({ adminUser: username, adminPass: password }).then((user) => {
       if (user) {
-        let unhashedPassword = getUnhashed(user.password);
-        if (unhashedPassword == password) {
-          localStorage.set("currentUser", JSON.stringify(user));
-          res.redirect(`dashboard?id=${user.id}`);
-        } else {
-          errors.push({ msg: "Incorrect password" });
-          res.render("Login/page1", { errors, username });
-        }
+        let allUsers = [];
+        User.find().then((users) => {
+          users.forEach((c) => {
+            let currentUser = {
+              customerID: c.customerID,
+              account: c.account,
+              name: c.name,
+              gender: c.gender,
+              DOB: c.DOB,
+              number: c.number,
+              aadhar: c.aadhar,
+              pan: c.pan,
+              balance: c.totalAmount,
+            };
+            allUsers.push(currentUser);
+          });
+          res.render("Admin/adminDashboard", {
+            allUsers: JSON.stringify(allUsers),
+          });
+        });
       } else {
-        errors.push({ msg: "No username exists" });
-        res.render("Login/page1", { errors, username });
+        User.findOne({ username: username }).then((user) => {
+          if (user) {
+            let unhashedPassword = getUnhashed(user.password);
+            if (unhashedPassword == password) {
+              localStorage.set("currentUser", JSON.stringify(user));
+              res.redirect(`dashboard?id=${user.id}`);
+            } else {
+              errors.push({ msg: "Incorrect password" });
+              res.render("Login/page1", { errors, username });
+            }
+          } else {
+            errors.push({ msg: "No username exists" });
+            res.render("Login/page1", { errors, username });
+          }
+        });
       }
     });
+  }
 });
 module.exports = router;
