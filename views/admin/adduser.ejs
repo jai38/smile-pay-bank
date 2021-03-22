@@ -28,57 +28,57 @@
           <div class="flexbox d-flex flex-column block-example">
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputFirst1"></label>
+                <label for="exampleInputFirst1">Customer ID:</label>
                 <input
                   type="Number"
                   class="form-control"
                   name="customerID"
                   id="customerID"
-                  placeholder="Customer Id"
+                  placeholder="145"
                   value="<%= typeof customerID != 'undefined' ? customerID : '' %>"
                 />
               </div>
               <div class="col-sm-6 my-1">
-                <label for="exampleInputLast1"></label>
+                <label for="exampleInputLast1">Account:</label>
                 <input
                   required
                   type="Number"
                   class="form-control"
                   name="account"
                   id="account"
-                  placeholder="Account Number"
+                  placeholder="9879879879"
                   value="<%= typeof account != 'undefined' ? account : '' %>"
                 />
               </div>
             </div>
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputUser1"></label>
+                <label for="exampleInputUser1">Name:</label>
                 <input
                   type="text"
                   class="form-control"
                   name="name"
                   id="name"
-                  placeholder="Name"
+                  placeholder="John Doe"
                   value="<%= typeof name != 'undefined' ? name : '' %>"
                 />
               </div>
               <div class="col-sm-6 my-1">
-                <label for="exampleInputAccountno"></label>
+                <label for="exampleInputAccountno">Gender:</label>
                 <input
                   required
                   type="text"
                   class="form-control"
                   name="gender"
                   id="gender"
-                  placeholder="Gender"
+                  placeholder="Male"
                   value="<%= typeof gender != 'undefined' ? gender : '' %>"
                 />
               </div>
             </div>
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputpassword1"></label>
+                <label for="exampleInputpassword1">DOB:</label>
                 <input
                   required
                   type="date"
@@ -90,33 +90,33 @@
                 />
               </div>
               <div class="col-sm-6 my-1">
-                <label for="exampleInputconfirmPassword1"></label>
+                <label for="exampleInputconfirmPassword1">Email:</label>
                 <input
                   required
                   type="email"
                   class="form-control"
                   name="email"
                   id="email"
-                  placeholder="Email"
+                  placeholder="john.doe@gmail.com"
                   value="<%= typeof email != 'undefined' ? email : '' %>"
                 />
               </div>
             </div>
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputemail1"></label>
+                <label for="exampleInputemail1">Aadhar:</label>
                 <input
                   required
                   type="Number"
                   class="form-control"
                   name="aadhar"
                   id="aadhar"
-                  placeholder="Aadhar"
+                  placeholder="123456789012"
                   value="<%= typeof aadhar != 'undefined' ? aadhar : '' %>"
                 />
               </div>
               <div class="col-sm-6 my-1">
-                <label for="exampleInputconfirmPassword1"></label>
+                <label for="exampleInputconfirmPassword1">PAN:</label>
                 <input
                   required
                   type="text"
@@ -124,31 +124,26 @@
                   class="form-control"
                   name="pan"
                   id="pan"
-                  placeholder="PAN"
+                  placeholder="AA123456DC"
                   value="<%= typeof pan != 'undefined' ? pan : '' %>"
                 />
               </div>
             </div>
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputemail1"></label>
+                <label for="exampleInputemail1">Balance:</label>
                 <input
+                  class="form-control"
                   required
                   type="Number"
                   class="form-control"
                   name="totalAmount"
                   id="totalAmount"
-                  placeholder="Balance"
+                  placeholder="10000"
                   value="<%= typeof totalAmount != 'undefined' ? totalAmount : '' %>"
                 />
               </div>
             </div>
-            <!-- <div class="mx-sm-3 mb-2">
-            <input class="form-check-input" type="checkbox"></input>
-            <label required class="form-check-label" for="defaultCheck1">
-            I agree to the T&C
-            </label>
-        </div> -->
             <button type="submit" class="btn btn-success btn-sm mt-3">
               SIGNUP
             </button>

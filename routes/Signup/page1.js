@@ -13,7 +13,7 @@ let transporter = nodemailer.createTransport({
 });
 const router = express.Router();
 const generateOTP = () => {
-  return Math.floor(Math.random() * (999999 - 100000 + 1)) + 1000;
+  return Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000;
 };
 router.get("/", (req, res) => {
   //for clearing all users
