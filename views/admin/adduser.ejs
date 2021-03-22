@@ -16,7 +16,6 @@
     <!-- <link rel="stylesheet" href="/css/Signup/page1.css" type="text/css"> -->
   </head>
   <body>
-    <%- include('../partials/messages') %>
     <div class="background">
       <div class="backgroundImgFirst"></div>
       <div class="floatBox">
@@ -27,8 +26,9 @@
         <form
           action="/addUser"
           method="POST"
-          class="flexbox d-flex flex-column block-example"
         >
+        <%- include('../partials/messages') %>
+        <div class="flexbox d-flex flex-column block-example">
           <div class="form-row">
             <div class="col-sm-6 my-1">
               <label for="exampleInputFirst1"></label>
@@ -155,6 +155,7 @@
           <button type="submit" class="btn btn-primary btn-sm m-2">
             SIGNUP
           </button>
+        </div>
         </form>
       </div>
       <div class="backgroundImgSecond"></div>
