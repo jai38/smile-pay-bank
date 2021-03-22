@@ -37,10 +37,10 @@ app.use("/login/face", require("./routes/Login/face"));
 app.use("/login/paymentDone", require("./routes/Login/paymentDone"));
 app.use("/login/paymentUndone", require("./routes/Login/paymentUndone"));
 app.use("/login/payPin", require("./routes/Login/payPin"));
-app.use("/Admin/updateUser", require("./routes/Admin/updateUser"));
-app.use("/Admin/addUser", require("./routes/Admin/addUser"));
-app.use("/Admin/adminDashboard", require("./routes/Admin/adminDashboard"));
-app.use("/Admin/deleteUser", require("./routes/Admin/deleteUser"));
+app.use("/updateUser", require("./routes/Admin/updateUser"));
+app.use("/addUser", require("./routes/Admin/addUser"));
+app.use("/adminDashboard", require("./routes/Admin/adminDashboard"));
+app.use("/deleteUser", require("./routes/Admin/deleteUser"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, console.log(`Server is running on port ${PORT}`));

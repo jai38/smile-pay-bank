@@ -21,15 +21,16 @@
   width: 70%;
   top: 25%;
 }
-/* .flexbox input {
+.flexbox input {
     background-color: #262626;
-} */
-.flexbox input::after {
-  color: #262626;
 }
-/* .flexbox input::placeholder {
+.flexbox input::after {
+  background-color: #262626;
+}
+
+.flexbox input::placeholder {
   color: white;
-} */
+}
 
 /* .logo {
     position: absolute;
