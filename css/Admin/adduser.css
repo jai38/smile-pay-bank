@@ -54,3 +54,11 @@
 label {
   color: #ffffff;
 }
+.backAdd {
+  position: relative;
+  left: 15%;
+}
+.signupAdd {
+  position: relative;
+  left: 60%;
+}
