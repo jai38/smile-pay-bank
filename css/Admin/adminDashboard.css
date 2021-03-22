@@ -18,15 +18,17 @@
   justify-content: center;
   align-items: center;
 }
-button {
-  background-color: rgb(221, 25, 25);
-  color: rgb(10, 97, 173);
+.background a {
+  /* background-color: rgb(221, 25, 25); */
+  text-decoration: none !important;
+  color: rgb(233, 243, 252) !important;
   font-size: 35 px;
-  font-weight: bold;
+  font-weight:450;
   position: relative;
   top: 55%;
   left: 23%;
   width: 50%;
+  padding-left: 11.5%;
 }
 /* .logo {
   position: absolute;
