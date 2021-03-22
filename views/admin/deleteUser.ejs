@@ -11,11 +11,20 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="./../../css/Admin/deleteUser.css"
+      type="text/css"
+    />
     <script src="./../../clientJS/Admin/deleteUser.js"></script>
   </head>
   <body onload="deleteUser()">
-    <table class="table table-dark table-hover table-sm m-4" style="width: 75%">
-      <thead class="thead-light">
+    <h4 class="updateUserHeading">SMILE PAY BANK</h4>
+    <a href="/logout" onclick="logout()" class="logout btn btn-dark btn-lg"
+      >Logout</a
+    >
+    <table class="table table-striped table-dark" style="width: 80%">
+      <thead>
         <tr>
           <th scope="col">Customer ID</th>
           <th scope="col">Account</th>
@@ -26,7 +35,7 @@
           <th scope="col">Aadhar</th>
           <th scope="col">PAN</th>
           <th scope="col">Balance</th>
-          <th scope="col">DELETE</th>
+          <th scope="col">UPDATE</th>
         </tr>
       </thead>
 

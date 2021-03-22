@@ -1,0 +1,25 @@
+body {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: rgb(5, 140, 250);
+}
+.updateUserHeading {
+  position: relative;
+  align-items: center;
+  top: 5%;
+  left: 40%;
+  font-size: 220%;
+  color: #000;
+  margin-top: 2%;
+}
+table {
+  position: relative;
+  top: 40%;
+  left: 10%;
+  margin-top: 3%;
+}
+a {
+  position: absolute;
+  left: 90%;
+  top: 5%;
+}
