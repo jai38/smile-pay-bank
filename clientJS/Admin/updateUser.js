@@ -5,9 +5,8 @@ updateUser = () => {
   let tableDetails = document.getElementById("tableData");
   allUsers.forEach((c) => {
     console.log(c.customerID);
-    if (c.customerID == undefined) {
-      tableHTML += "";
-    } else {
+
+    if (c.customerID != undefined) {
       tableHTML += `<tr>
         <th scope="col">${c.customerID}</th>
         <th scope="col">${c.account}</th>
