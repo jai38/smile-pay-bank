@@ -2,9 +2,11 @@ const express = require("express");
 const User = require("../../Models/User");
 const router = express.Router();
 let errors = [];
+
 router.get("/", (req, res) => {
   res.render("./Admin/addUser");
 });
+
 router.post("/", (req, res) => {
   const {
     customerID,
@@ -83,4 +85,5 @@ router.post("/", (req, res) => {
     });
   }
 });
+
 module.exports = router;

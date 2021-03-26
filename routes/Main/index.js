@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
         name: c.name,
         gender: c.gender,
         DOB: c.DOB,
-        number: c.number,
+        email: c.email,
         aadhar: c.aadhar,
         pan: c.pan,
         balance: c.totalAmount,

@@ -24,7 +24,6 @@
       id="allUsers"
       name="allUsers"
       value="<%= typeof allUsers != 'undefined' ? allUsers : '' %>"
-      style="display: none"
     />
     <div class="background">
       <%- include('../partials/messages') %>
@@ -44,10 +43,14 @@
         <a href="/deleteUser" type="button" class="btn-lg btn-dark m-2">
           Delete Customer
         </a>
-        <a href="/" type="button" class="btn-lg btn-danger pl-5" style="width: 30%; position: absolute;top: 85%; left: 34%;">
+        <a
+          href="/"
+          type="button"
+          class="btn-lg btn-danger pl-5"
+          style="width: 30%; position: absolute; top: 85%; left: 34%"
+        >
           Logout
         </a>
-        
       </div>
       <div class="backgroundImgSecond"></div>
     </div>

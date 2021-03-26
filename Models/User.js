@@ -10,9 +10,6 @@ const UserSchema = new mongoose.Schema({
   name: {
     type: String,
   },
-  number: {
-    type: String,
-  },
   DOB: {
     type: Date,
   },

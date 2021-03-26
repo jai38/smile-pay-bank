@@ -4,8 +4,6 @@ updateUser = () => {
   let tableHTML = "";
   let tableDetails = document.getElementById("tableData");
   allUsers.forEach((c) => {
-    console.log(c.customerID);
-
     if (c.customerID != undefined) {
       tableHTML += `<tr>
         <th scope="col">${c.customerID}</th>
@@ -17,7 +15,7 @@ updateUser = () => {
         <th scope="col">${c.aadhar}</th>
         <th scope="col">${c.pan}</th>
         <th scope="col">${c.balance}</th>
-        <th scope="col"><button>UPDATE</button></th>
+        <th scope="col"><button class="btn btn-dark">UPDATE</button></th>
       </tr>`;
     }
   });

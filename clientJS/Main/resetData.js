@@ -1,4 +1,5 @@
 function resetData() {
-  localStorage.clear();
-  localStorage.setItem("imageCount", "2");
+  const allUsers = document.getElementById("allUsers").value;
+  console.log(allUsers);
+  if (allUsers.length >= 10) localStorage.setItem("allUsers", allUsers);
 }
