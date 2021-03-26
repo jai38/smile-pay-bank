@@ -11,7 +11,7 @@ updateUser = () => {
         <th scope="col">${c.name}</th>
         <th scope="col">${c.gender}</th>
         <th scope="col">${c.DOB}</th>
-        <th scope="col">${c.number}</th>
+        <th scope="col">${c.email}</th>
         <th scope="col">${c.aadhar}</th>
         <th scope="col">${c.pan}</th>
         <th scope="col">${c.balance}</th>

@@ -18,12 +18,14 @@
     />
     <script src="./../../clientJS/Admin/adminDashboard.js"></script>
   </head>
-  <body onload="getData()">
+  <body>
     <input
       type="text"
       id="allUsers"
       name="allUsers"
-      value="<%= typeof allUsers != 'undefined' ? allUsers : '' %>"
+      value="<% if(typeof allUsers != 'undefined'){ %>
+        <%= allUsers %> 
+    <% } %> "
     />
     <div class="background">
       <%- include('../partials/messages') %>
