@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | UPDATE </title>
+    <link rel="stylesheet" href="/css/Admin/adduser.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- <script src="./../../clientJS/Admin/updatesignup.js"></script> -->
+    <!-- <link rel="stylesheet" href="/css/Signup/page1.css" type="text/css"> -->
+  </head>
+  <body>
+    <div class="background">
+      <div class="backgroundImgFirst"></div>
+      <div class="floatBox">
+        <div class="logo">
+          <span class="icon"></span>
+          <!-- <span class="smilepay">SMILE PAY</span> -->
+        </div>
+        <form action="/updatesignup" method="POST">
+          <%- include('../partials/messages') %>
+          <div class="flexbox d-flex flex-column block-example">
+            <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputFirst1">Customer ID:</label>
+                <input
+                  type="Number"
+                  class="form-control"
+                  name="customerID"
+                  id="customerID"
+                  value="<%= typeof customerID != 'undefined' ? customerID : '' %>"
+                />
+              </div>
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputLast1">Account:</label>
+                <input
+                  required
+                  type="Number"
+                  class="form-control"
+                  name="account"
+                  id="account"
+                  value="<%= typeof account != 'undefined' ? account : '' %>"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputUser1">Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  id="name"
+                  value="<%= typeof account != 'undefined' ? account : '' %>"
+                />
+              </div>
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputAccountno">Gender:</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  name="gender"
+                  id="gender"
+                  value="<%= typeof gender != 'undefined' ? gender : '' %>"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputpassword1">DOB:</label>
+                <input
+                  required
+                  class="form-control"
+                  name="DOB"
+                  id="DOB"
+                  value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
+                />
+              </div>
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputconfirmPassword1">Email:</label>
+                <input
+                  required
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  value="<%= typeof email != 'undefined' ? email : '' %>"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputemail1">Aadhar:</label>
+                <input
+                  required
+                  type="Number"
+                  class="form-control"
+                  name="aadhar"
+                  id="aadhar"
+                  value="<%= typeof aadhar != 'undefined' ? aadhar : '' %>"
+                />
+              </div>
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputconfirmPassword1">PAN:</label>
+                <input
+                  required
+                  type="text"
+                  style="text-transform: uppercase"
+                  class="form-control"
+                  name="pan"
+                  id="pan"
+                  value="<%= typeof pan != 'undefined' ? pan : '' %>"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputemail1">Balance:</label>
+                <input
+                  class="form-control"
+                  required
+                  type="Number"
+                  class="form-control"
+                  name="totalAmount"
+                  id="totalAmount"
+                  value="<%= typeof totalAmount != 'undefined' ? totalAmount : '' %>"
+                />
+              </div>
+            </div>
+            <div class="flex d-flex">
+              <button
+                type="submit"
+                onclick="goBack()"
+                class="backAdd btn btn-dark btn-lg mt-3"
+              >
+                BACK
+              </button>
+              <button
+                type="submit"
+                class="signupAdd btn btn-success btn-lg mt-3"
+              >
+                UPDATE
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="backgroundImgSecond"></div>
+    </div>
+  </body>
+  <script src="./../../clientJS/Admin/updatesignup.js"></script>
+</html>
