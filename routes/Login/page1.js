@@ -36,14 +36,15 @@ router.post("/", (req, res) => {
               name: c.name,
               gender: c.gender,
               DOB: c.DOB,
-              number: c.number,
+              email: c.email,
               aadhar: c.aadhar,
               pan: c.pan,
               balance: c.totalAmount,
             };
+            console.log(currentUser);
             allUsers.push(currentUser);
           });
-          res.render("Admin/adminDashboard", {
+          res.render("./Admin/adminDashboard", {
             allUsers: JSON.stringify(allUsers),
           });
         });
