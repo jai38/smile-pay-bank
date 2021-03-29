@@ -6,4 +6,8 @@ router.get("/", (req, res) => {
   res.render("./Admin/deleteUser");
 });
 
+router.post("/", (req, res) => {
+  let currentDelete = req.body;
+  User.findOneAndDelete({ account: currentDelete.account });
+});
 module.exports = router;
