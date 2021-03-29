@@ -21,25 +21,26 @@
 
   </head>
   <body onload="deleteUser()">
-    <form action="" method="POST">
-      <input style="display: none" id="remove"></input>
-    </form>
-    <h4 class="updateUserHeading">SMILE PAY BANK</h4>
-    <a
+    <%- include('../partials/messages') %>
+    <form action="/deleteUser" method="POST">
+      <input  id="remove" style="display: none;" name="currentDelete"></input>
+      <h4 class="updateUserHeading">SMILE PAY BANK</h4>
+      <a
       href="/adminDashboard"
       onclick="logout()"
       class="logout btn btn-dark btn-lg"
       >Back</a
-    >
-    <div class="deletebox">
-      <h5 class="confirmation">Are you sure you want to delete the Customer</h5>
-      <button class="yesbtn btn-lg">Yes</button>
-      <button class="nobtn btn-lg">No</button>
-      <button type="button" class="close btn-lg" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <table class="table table-striped" style="width: 80%">
+      >
+      <div class="deletebox" id="deleteBox" style="display: none;">
+        <h5 class="confirmation">Are you sure you want to delete the Customer</h5>
+        <button class="yesbtn btn-lg" type="submit">Yes</button>
+        <button class="nobtn btn-lg" type = "button" onclick="deleteBox()">No</button>
+        <button type="button" class="close btn-lg" aria-label="Close">
+          <span aria-hidden="true" onclick="deleteBox()">&times;</span>
+        </button>
+      </div>
+    </form>
+      <table class="table table-striped" style="width: 80%">
       <thead class="table-dark">
         <tr>
           <th scope="col">Customer ID</th>

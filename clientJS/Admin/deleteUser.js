@@ -5,8 +5,10 @@ currentDelete = (account) => {
   result.forEach((c) => {
     if (c.account == account) {
       localStorage.setItem("currentDelete", JSON.stringify(c));
+      document.getElementById("remove").value = JSON.stringify(c);
     }
   });
+  document.getElementById("deleteBox").style.display = "block";
 };
 
 deleteUser = () => {
@@ -26,7 +28,7 @@ deleteUser = () => {
       <th scope="col">${c.aadhar}</th>
       <th scope="col">${c.pan}</th>
       <th scope="col">${c.balance}</th>
-      <th scope="col"><button class="btn btn-dark" onclick="currentDelete(${c.account})">DELETE</button></th>
+      <th scope="col"><button class="btn btn-dark" type="button" onclick="currentDelete(${c.account})">DELETE</button></th>
     </tr>`;
   });
   tableDetails.innerHTML = tableHTML;

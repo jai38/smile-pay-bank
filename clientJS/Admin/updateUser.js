@@ -1,16 +1,14 @@
-
-getUpdate = (customerID) =>{
-  let result=[]
-  result=localStorage.getItem("allUsers")
-  result=JSON.parse(result)
+getUpdate = (customerID) => {
+  let result = [];
+  result = localStorage.getItem("allUsers");
+  result = JSON.parse(result);
   result.forEach((c) => {
     if (c.customerID == customerID) {
       localStorage.setItem("currentUpdate", JSON.stringify(c));
-      console.log(c);
     }
   });
   window.location.href = "/updatesignup";
-}
+};
 
 updateUser = () => {
   let allUsers = localStorage.getItem("allUsers");

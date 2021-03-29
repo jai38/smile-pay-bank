@@ -1,13 +1,21 @@
 const express = require("express");
 const User = require("../../Models/User");
 const router = express.Router();
+let errors = [];
 
 router.get("/", (req, res) => {
   res.render("./Admin/deleteUser");
 });
 
 router.post("/", (req, res) => {
-  let currentDelete = req.body;
-  User.findOneAndDelete({ account: currentDelete.account });
+  let current = JSON.parse(req.body.currentDelete);
+  User.findOneAndDelete({ account: current.account }).then((user) => {
+    errors.push({
+      msg: "User Deleted Successfully, please relogin to see the changes!",
+    });
+    res.render("./Admin/deleteUser", {
+      errors,
+    });
+  });
 });
 module.exports = router;
