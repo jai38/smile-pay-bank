@@ -79,7 +79,7 @@ router.post("/", (req, res) => {
         user.save().then(() => {
           errors = [];
           errors.push({ msg: "User added successfully" });
-          res.render("./Admin/addUser", { errors });
+          res.render("Main/MainPage", { errors });
         });
       }
     });
