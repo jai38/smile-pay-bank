@@ -22,7 +22,7 @@
   top: 20%;
 }
 .flexbox input {
-  background-color: #0a0a0a;
+  background-color: white;
 }
 .flexbox input::placeholder::after {
   color: white !important;
@@ -52,7 +52,7 @@
   color: #ffffff;
 }
 label {
-  color: #ffffff;
+  color: black;
 }
 .backAdd {
   position: relative;
