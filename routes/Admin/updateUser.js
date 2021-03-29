@@ -6,4 +6,6 @@ router.get("/", (req, res) => {
   res.render("./Admin/updateUser");
 });
 
+
+
 module.exports = router;

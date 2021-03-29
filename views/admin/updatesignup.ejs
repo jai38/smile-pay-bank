@@ -12,7 +12,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <!-- <script src="./../../clientJS/Admin/updatesignup.js"></script> -->
+    <script src="./../../clientJS/Admin/display.js"></script>
     <!-- <link rel="stylesheet" href="/css/Signup/page1.css" type="text/css"> -->
   </head>
   <body>
@@ -34,8 +34,17 @@
                   class="form-control"
                   name="customerID"
                   id="customerID"
-                  value="<%= typeof customerID != 'undefined' ? customerID : '' %>"
+                  value="<%= typeof customerID != 'undefined' ? customerID : '' %>" 
+                  style="display: none;"
                 />
+                <div 
+                type="Number"
+                  name="customerID"
+                  id="customerID1"
+                  value="<%= typeof customerID != 'undefined' ? customerID : '' %>"
+                  onclick="changeDisplay(id)"
+                  style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;"
+                  ><span>  </span></div>
               </div>
               <div class="col-sm-6 my-1">
                 <label for="exampleInputLast1">Account:</label>
@@ -46,7 +55,16 @@
                   name="account"
                   id="account"
                   value="<%= typeof account != 'undefined' ? account : '' %>"
+                  style="display: none;"
                 />
+                <div 
+                type="Number"
+                name="account"
+                id="account1"
+                value="<%= typeof account != 'undefined' ? account : '' %>"
+                onclick="changeDisplay(id)"
+                style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;"
+                ><span>  </span></div>
               </div>
             </div>
             <div class="form-row">
@@ -58,7 +76,16 @@
                   name="name"
                   id="name"
                   value="<%= typeof account != 'undefined' ? account : '' %>"
+                  style="display: none;"
                 />
+                <div 
+                type="text"
+                name="name"
+                id="name1"
+                value="<%= typeof name != 'undefined' ? name : '' %>"
+                onclick="changeDisplay(id)"
+                style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;"
+                ></div>
               </div>
               <div class="col-sm-6 my-1">
                 <label for="exampleInputAccountno">Gender:</label>
@@ -69,7 +96,16 @@
                   name="gender"
                   id="gender"
                   value="<%= typeof gender != 'undefined' ? gender : '' %>"
+                  style="display: none;"
                 />
+                <div 
+                type="text"
+                name="gender"
+                id="gender1"
+                value="<%= typeof gender != 'undefined' ? gender : '' %>"
+                onclick="changeDisplay(id)"
+                style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;"
+                ></div>
               </div>
             </div>
             <div class="form-row">
@@ -81,7 +117,16 @@
                   name="DOB"
                   id="DOB"
                   value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
+                  style="display: none;"
                 />
+                <div 
+                type="text"
+                name="DOB"
+                id="DOB1"
+                value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
+                onclick="changeDisplay(id)"
+                style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;"
+                ></div>
               </div>
               <div class="col-sm-6 my-1">
                 <label for="exampleInputconfirmPassword1">Email:</label>
@@ -92,7 +137,16 @@
                   name="email"
                   id="email"
                   value="<%= typeof email != 'undefined' ? email : '' %>"
+                  style="display: none;"
                 />
+                <div 
+                type="email"
+                name="email"
+                id="email1"
+                value="<%= typeof email != 'undefined' ? email : '' %>"
+                onclick="changeDisplay(id)"
+                style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;"
+                ></div>
               </div>
             </div>
             <div class="form-row">
@@ -105,19 +159,36 @@
                   name="aadhar"
                   id="aadhar"
                   value="<%= typeof aadhar != 'undefined' ? aadhar : '' %>"
+                  style="display: none;"
                 />
+                <div 
+                type="Number"
+                name="aadhar"
+                id="aadhar1"
+                value="<%= typeof aadhar != 'undefined' ? aadhar : '' %>"
+                onclick="changeDisplay(id)"
+                style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;"
+                ></div>
               </div>
               <div class="col-sm-6 my-1">
                 <label for="exampleInputconfirmPassword1">PAN:</label>
                 <input
                   required
                   type="text"
-                  style="text-transform: uppercase"
+                  style="text-transform: uppercase;display: none;"
                   class="form-control"
                   name="pan"
                   id="pan"
                   value="<%= typeof pan != 'undefined' ? pan : '' %>"
                 />
+                <div 
+                type="Number"
+                name="pan"
+                id="pan1"
+                value="<%= typeof pan1 != 'undefined' ? pan1 : '' %>"
+                onclick="changeDisplay(id)"
+                style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;text-transform: uppercase;"
+                ><span>  </span></div>
               </div>
             </div>
             <div class="form-row">
@@ -131,7 +202,16 @@
                   name="totalAmount"
                   id="totalAmount"
                   value="<%= typeof totalAmount != 'undefined' ? totalAmount : '' %>"
+                  style="display: none;"
                 />
+                <div 
+                type="Number"
+                name="totalAmount"
+                id="totalAmount1"
+                value="<%= typeof totalAmount != 'undefined' ? totalAmount : '' %>"
+                onclick="changeDisplay(id)"
+                style="border: 2px solid black; height: 52.5%; border-radius: 4%; padding-left: 3%;padding-top: 1%;"
+                ></div>
               </div>
             </div>
             <div class="flex d-flex">
@@ -145,6 +225,7 @@
               <button
                 type="submit"
                 class="signupAdd btn btn-success btn-lg mt-3"
+                onClick="update()"
               >
                 UPDATE
               </button>
