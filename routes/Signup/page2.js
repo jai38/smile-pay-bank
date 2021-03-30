@@ -10,7 +10,6 @@ router.post("/", async (req, res) => {
   let errors = [];
   const { otp, account } = req.body;
   const OriginalOTP = parseInt(fs.readFileSync(`${account}.txt`, "utf-8"), 16);
-  fs.unlinkSync(`${account}.txt`);
   if (!otp) {
     errors.push({ msg: "Please fill all the details" });
     res.render("Signup/page2", { otp, errors });
@@ -21,7 +20,10 @@ router.post("/", async (req, res) => {
     res.render("Signup/page2", { otp, errors });
     res.end();
   }
-  if (errors.length == 0) res.redirect("third");
+  if (errors.length == 0) {
+    fs.unlinkSync(`${account}.txt`);
+    res.redirect("third");
+  }
 });
 
 module.exports = router;
