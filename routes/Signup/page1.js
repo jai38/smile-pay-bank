@@ -27,6 +27,11 @@ router.post("/", (req, res) => {
   if (!name || !email || !account) {
     errors.push({ msg: "Please fill all the details" });
   }
+  // if (email.length != 10) {
+  //   errors.push({
+  //     msg: "Please enter valid email address",
+  //   });
+  // }
   if (account.length != 10) {
     errors.push({
       msg: "Please enter 10 digit account number",

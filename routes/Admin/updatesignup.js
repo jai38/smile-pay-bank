@@ -6,8 +6,18 @@ router.get("/", (req, res) => {
   res.render("./Admin/updatesignup");
 });
 
-router.post("/" , (req,res) => {
-  const {customerID,email,account,name,gender,aadhar,pan,balance}=req.body;
+router.post("/", (req, res) => {
+  const {
+    customerID,
+    email,
+    account,
+    name,
+    gender,
+    aadhar,
+    pan,
+    totalAmount,
+    DOB,
+  } = req.body;
   let errors = [];
   if (!name || !email || !account) {
     errors.push({ msg: "Please fill all the details" });
@@ -20,24 +30,20 @@ router.post("/" , (req,res) => {
   if (errors.length > 0) {
     res.render("/updatesignup", { errors, name, email, account });
     console.log(errors);
-  }else{
-    User.findOneAndDelete({customerID}).then(() => {
-      User.findOne({account}).then(user=>{
-        if(user)
-        errors.push({msg: "Account no already exist"})
-        else{
-          User.findOne({email}).then(user => {
-            if(user)
-            errors.push({msg: "email already exist"})
-            else{
-              User.findOne({pan}).then(user => {
-                if(user)
-                errors.push({msg:"Pan no already exist"})
-                else{
-                  User.findOne({aadhar}).then(user => {
-                    if(user)
-                    errors.push({msg:"aadhar no already exist"})
-                    else{
+  } else {
+    User.findOneAndDelete({ customerID }).then(() => {
+      User.findOne({ account }).then((user) => {
+        if (user) errors.push({ msg: "Account no already exist" });
+        else {
+          User.findOne({ email }).then((user) => {
+            if (user) errors.push({ msg: "email already exist" });
+            else {
+              User.findOne({ pan }).then((user) => {
+                if (user) errors.push({ msg: "Pan no already exist" });
+                else {
+                  User.findOne({ aadhar }).then((user) => {
+                    if (user) errors.push({ msg: "aadhar no already exist" });
+                    else {
                       const user = new User({
                         customerID,
                         name,
@@ -49,21 +55,25 @@ router.post("/" , (req,res) => {
                         gender,
                         DOB,
                       });
-                      user.save().then(()=>{
-                        errors.push({msg: "Updated Succcessfully"})
-                        res.render("Main/MainPage")
-                      })
+                      console.log(user);
+                      user.save().then(() => {
+                        errors.push({
+                          msg:
+                            "Updated Succcessfully, You have been logged out",
+                        });
+                        res.render("Main/MainPage", { errors });
+                      });
                     }
-                  })
+                  });
                 }
-              })
+              });
             }
-          })
+          });
         }
-      })
-    })
+      });
+    });
   }
-})
+});
 // router.post("/" , (req,res) => {
 //   const {customerID,email,account,name,gender,aadhar,pan,balance}=req.body;
 //   let errors = [];
