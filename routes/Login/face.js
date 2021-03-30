@@ -12,8 +12,7 @@ router.post("/", (req, res) => {
     amountDebit,
     accountOfDonor,
   } = req.body;
-  console.log(accountOfRecipient);
-  console.log(amountDebit);
+
   if (paymentStatus == "done") {
     User.updateOne(
       { account: accountOfRecipient },

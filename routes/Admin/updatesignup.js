@@ -19,8 +19,7 @@ router.get("/", (req, res) => {
 //   }
 //   if (errors.length > 0) {
 //     res.render("Signup/page1", { errors, name, email, account });
-//     console.log(errors);
-//   } 
+//   }
 // })
 
 module.exports = router;
