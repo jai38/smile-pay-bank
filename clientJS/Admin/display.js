@@ -1,11 +1,7 @@
 // let user = localStorage.getItem("currentUpdate");
 // user=JSON.parse(user)
+
 changeDisplay = (id) => {
-    // if(id=="customerID1"){
-    // document.getElementById(id).style.display="none";
-    // document.getElementById("customerID").style.display="block";
-    // document.getElementById("customerID").value=user.customerID;
-    // }
     if(id=="account1"){
     document.getElementById(id).style.display="none";
     document.getElementById("account").style.display="block";
@@ -44,6 +40,6 @@ changeDisplay = (id) => {
     if(id=="totalAmount1"){
         document.getElementById(id).style.display="none";
         document.getElementById("totalAmount").style.display="block";
-        document.getElementById("totalAmount").value=user.totalAmount;
+        document.getElementById("totalAmount").value=user.balance;
     }
 }

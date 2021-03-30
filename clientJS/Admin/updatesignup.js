@@ -19,5 +19,6 @@ document.getElementById("pan1").innerHTML=user.pan;
 document.getElementById("totalAmount1").innerHTML=user.balance;
 document.getElementById("aadhar1").innerHTML=user.aadhar;
 document.getElementById("name1").innerHTML=user.name;
+document.getElementById("customerID").value=user.customerID;
 // document.getElementById("name").value=user.name;
 
