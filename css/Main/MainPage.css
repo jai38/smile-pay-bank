@@ -356,3 +356,8 @@
     border-bottom: 1px;
   }
 }
+.alert {
+  width: 75%;
+  position: absolute;
+  left: 15%;
+}

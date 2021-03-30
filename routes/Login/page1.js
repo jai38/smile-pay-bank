@@ -41,7 +41,6 @@ router.post("/", (req, res) => {
               pan: c.pan,
               balance: c.totalAmount,
             };
-            console.log(currentUser);
             allUsers.push(currentUser);
           });
           res.render("./Admin/adminDashboard", {

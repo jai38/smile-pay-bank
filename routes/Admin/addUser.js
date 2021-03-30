@@ -19,7 +19,6 @@ router.post("/", (req, res) => {
     gender,
     DOB,
   } = req.body;
-  console.log(DOB);
   getData = () => {
     return {
       customerID,

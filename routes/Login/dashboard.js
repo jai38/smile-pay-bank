@@ -16,8 +16,6 @@ router.get("/", (req, res, next) => {
 router.post("/", (req, res) => {
   let errors = [];
   const { currentBalance, amount, account } = req.body;
-  console.log(currentBalance);
-  console.log(amount);
 
   // res.setHeader('Content-type','text/plain');
   if (parseInt(amount) <= 0) {
