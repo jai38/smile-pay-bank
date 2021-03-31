@@ -27,35 +27,37 @@ a {
   border: 2px solid white;
   position: absolute;
   background-color: rgba(44, 35, 35, 0.952);
-  height: 26%;
+  height: 35%;
   width: 30%;
   top: 40%;
   left: 32%;
   z-index: 1;
+  padding-top: 9%;
 }
 .confirmation {
   position: absolute;
   color: aliceblue;
-  top: 15%;
+  top: 20%;
   left: 8%;
   font-size: x-large;
 }
 .yesbtn {
   position: relative;
-  top: 60%;
+  top: 10%;
   left: 15%;
   margin: 2%;
 }
 .nobtn {
   position: relative;
-  top: 60%;
+  top: 10%;
   left: 50%;
   margin: 2%;
 }
 .close {
   color: rgb(255, 255, 255);
   position: absolute;
-  right: 2%;
+  right: 4%;
+  top: 3%;
   text-decoration: none;
   font-size: 200%;
 }

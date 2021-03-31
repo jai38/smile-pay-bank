@@ -1,3 +1,10 @@
+.inputDiv {
+  border: 2px solid black;
+  height: 52.5%;
+  border-radius: 4%;
+  padding-left: 3%;
+  padding-top: 1%;
+}
 form-control {
   background-color: azure;
 }
