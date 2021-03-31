@@ -54,7 +54,13 @@ router.post("/", (req, res) => {
               from: process.env.user,
               to: email,
               subject: "Smile Pay",
-              text: `Your OTP for registeration is ${OTP} please do not share this with anyone. \nThank you for using Smile-pay`,
+              html: `<div>
+              <p>Your OTP for SmilePay Email verification is:</p>
+              <p>OTP:<b>${OTP}</b></p>
+              <p>Please verify your email to continue.Do not share this OTP with anyone</p>
+              <p>Thank you for visiting to SmilePay.</p>
+              <p>Kind regards, Smilepay Team.</p>
+            </div>`,
             };
             transporter.sendMail(mailOptions, (err, info) => {
               if (err) {
