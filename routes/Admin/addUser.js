@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const {
+  let {
     customerID,
     name,
     email,
@@ -19,7 +19,7 @@ router.post("/", (req, res) => {
     gender,
     DOB,
   } = req.body;
-  console.log(DOB);
+  customerID = customerID.toString();
   getData = () => {
     return {
       customerID,
@@ -59,14 +59,11 @@ router.post("/", (req, res) => {
     errors.push({ msg: "balance cannot be 0 or negative" });
     res.render("./Admin/addUser", getData());
   } else {
-    User.findOne({
-      customerID,
-      email,
-      aadhar,
-      pan,
-      account,
+    User.find({
+      $or: [{ customerID }, { email }, { aadhar }, { pan }, { account }],
     }).then((user) => {
-      if (user) {
+      if (user[0]) {
+        user = user[0];
         if (user.account == account) {
           errors = [];
           errors.push({ msg: "Account number is already in our database" });
