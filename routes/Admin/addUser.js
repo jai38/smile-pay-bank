@@ -59,11 +59,35 @@ router.post("/", (req, res) => {
     errors.push({ msg: "balance cannot be 0 or negative" });
     res.render("./Admin/addUser", getData());
   } else {
-    User.findOne({ account }).then((user) => {
+    User.findOne({
+      customerID,
+      email,
+      aadhar,
+      pan,
+      account,
+    }).then((user) => {
       if (user) {
-        errors = [];
-        errors.push({ msg: "Account number is already in our database" });
-        res.render("./Admin/addUser", getData());
+        if (user.account == account) {
+          errors = [];
+          errors.push({ msg: "Account number is already in our database" });
+          res.render("./Admin/addUser", getData());
+        } else if (user.customerID == customerID) {
+          errors = [];
+          errors.push({ msg: "Customer ID is already in our database" });
+          res.render("./Admin/addUser", getData());
+        } else if (user.email == email) {
+          errors = [];
+          errors.push({ msg: "Email is already in our database" });
+          res.render("./Admin/addUser", getData());
+        } else if (user.aadhar == aadhar) {
+          errors = [];
+          errors.push({ msg: "Aadhar number is already in our database" });
+          res.render("./Admin/addUser", getData());
+        } else if (user.pan == pan) {
+          errors = [];
+          errors.push({ msg: "Pan number is already in our database" });
+          res.render("./Admin/addUser", getData());
+        }
       } else {
         const user = new User({
           customerID,
@@ -78,7 +102,9 @@ router.post("/", (req, res) => {
         });
         user.save().then(() => {
           errors = [];
-          errors.push({ msg: "User added successfully,please relogin to see the changes" });
+          errors.push({
+            msg: "User added successfully,please relogin to see the changes",
+          });
           res.render("Main/MainPage", { errors });
         });
       }
