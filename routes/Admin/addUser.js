@@ -78,8 +78,8 @@ router.post("/", (req, res) => {
         });
         user.save().then(() => {
           errors = [];
-          errors.push({ msg: "User added successfully" });
-          res.render("./Admin/addUser", { errors });
+          errors.push({ msg: "User added successfully,please relogin to see the changes" });
+          res.render("Main/MainPage", { errors });
         });
       }
     });

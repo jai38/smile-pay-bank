@@ -23,13 +23,14 @@ a {
   top: 5%;
 }
 .deletebox {
+  border-radius: 20px;
+  border: 2px solid white;
   position: absolute;
   background-color: rgba(44, 35, 35, 0.952);
-
   height: 26%;
   width: 30%;
   top: 40%;
-  left: 35%;
+  left: 32%;
   z-index: 1;
 }
 .confirmation {
