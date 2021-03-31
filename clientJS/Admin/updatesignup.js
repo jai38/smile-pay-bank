@@ -9,6 +9,7 @@
 
 let user = localStorage.getItem("currentUpdate");
 user=JSON.parse(user)
+user.DOB=new Date(user.DOB).toLocaleDateString()
 console.log(user.name)
 document.getElementById("customerID1").innerHTML=user.customerID;
 document.getElementById("account1").innerHTML=user.account;
