@@ -4,6 +4,9 @@
   border-radius: 4%;
   padding-left: 3%;
   padding-top: 1%;
+  background-color: #d6d6c2;
+  color: black;
+  font-weight: bold;
 }
 form-control {
   background-color: azure;
