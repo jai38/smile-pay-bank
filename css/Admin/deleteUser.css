@@ -57,13 +57,13 @@ a {
 }
 .deletebox {
   border-radius: 20px;
-  border: 2px solid white;
+  border: 2px solid rgb(5, 5, 5);
   position: fixed;
   top: 30%;
   background-color: rgba(44, 35, 35, 0.952);
-  height: 35%;
+  height: 30%;
   width: 30%;
-  left: 32%;
+  left: 35%;
   z-index: 1;
-  padding-top: 9%;
+  padding-top: 8%;
 }
