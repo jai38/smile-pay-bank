@@ -14,6 +14,11 @@
     />
     <script src="./../../clientJS/Admin/display.js"></script>
     <script src="./../../clientJS/Admin/addUser.js"></script>
+    <link
+      rel="stylesheet"
+      href="./../../css/Admin/updateSignup.css"
+      type="text/css"
+    />
   </head>
   <body>
     <div class="background">
@@ -42,13 +47,7 @@
                   id="customerID1"
                   value="<%= typeof customerID != 'undefined' ? customerID : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
               <div class="col-sm-6 my-1">
@@ -68,13 +67,7 @@
                   id="account1"
                   value="<%= typeof account != 'undefined' ? account : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
             </div>
@@ -95,13 +88,7 @@
                   id="name1"
                   value="<%= typeof name != 'undefined' ? name : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
               <div class="col-sm-6 my-1">
@@ -121,13 +108,7 @@
                   id="gender1"
                   value="<%= typeof gender != 'undefined' ? gender : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
             </div>
@@ -136,11 +117,11 @@
                 <label for="exampleInputpassword1">DOB:</label>
                 <input
                   required
-                  
+                  type="date"
                   class="form-control"
                   name="DOB"
                   id="DOB"
-                  value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
+                  value="<%= typeof DOB != 'undefined' ? DOB.toISOString() : '' %>"
                   style="display: none"
                 />
                 <div
@@ -148,13 +129,7 @@
                   id="DOB1"
                   value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
               <div class="col-sm-6 my-1">
@@ -174,13 +149,7 @@
                   id="email1"
                   value="<%= typeof email != 'undefined' ? email : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
             </div>
@@ -202,13 +171,7 @@
                   id="aadhar1"
                   value="<%= typeof aadhar != 'undefined' ? aadhar : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
               <div class="col-sm-6 my-1">
@@ -228,14 +191,7 @@
                   id="pan1"
                   value="<%= typeof pan1 != 'undefined' ? pan1 : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                    text-transform: uppercase;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
             </div>
@@ -258,13 +214,7 @@
                   id="totalAmount1"
                   value="<%= typeof totalAmount != 'undefined' ? totalAmount : '' %>"
                   onclick="changeDisplay(id)"
-                  style="
-                    border: 2px solid black;
-                    height: 52.5%;
-                    border-radius: 4%;
-                    padding-left: 3%;
-                    padding-top: 1%;
-                  "
+                  class="inputDiv"
                 ></div>
               </div>
             </div>
