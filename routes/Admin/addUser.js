@@ -19,6 +19,7 @@ router.post("/", (req, res) => {
     gender,
     DOB,
   } = req.body;
+  console.log(DOB);
   getData = () => {
     return {
       customerID,
@@ -78,7 +79,7 @@ router.post("/", (req, res) => {
         user.save().then(() => {
           errors = [];
           errors.push({ msg: "User added successfully" });
-          res.render("Main/MainPage", { errors });
+          res.render("./Admin/addUser", { errors });
         });
       }
     });
