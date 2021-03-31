@@ -54,13 +54,15 @@ router.post("/", (req, res) => {
               from: process.env.user,
               to: email,
               subject: "Smile Pay",
-              html: `<div>
-              <p>Your OTP for SmilePay Email verification is:</p>
-              <p>OTP:<b>${OTP}</b></p>
-              <p>Please verify your email to continue.Do not share this OTP with anyone</p>
-              <p>Thank you for visiting to SmilePay.</p>
-              <p>Kind regards, Smilepay Team.</p>
-            </div>`,
+              html: `<pre style='font-family: Arial, Helvetica, sans-serif;'>
+Your OTP for Registeration at Smile-Pay is:
+OTP: <b>${OTP}</b>
+Please verify your email to continue.Do not share this OTP with anyone
+Thank you for choosing us.
+
+<b>Kind regards,</b>
+<b>Smile-Pay Team.</b>
+            </pre>`,
             };
             transporter.sendMail(mailOptions, (err, info) => {
               if (err) {
