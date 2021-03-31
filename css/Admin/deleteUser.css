@@ -53,9 +53,10 @@ a {
 }
 .close {
   color: rgb(255, 255, 255);
-  position: relative;
-  right: 1%;
-  top: 4%;
+  position: absolute;
+  right: 2%;
+  text-decoration: none;
+  font-size: 200%;
 }
 .alert {
   position: absolute;
