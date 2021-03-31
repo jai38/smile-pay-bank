@@ -1,7 +1,7 @@
 const express = require("express");
 const User = require("../../Models/User");
 const router = express.Router();
-let errors=[]
+let errors = [];
 
 router.get("/", (req, res) => {
   res.render("./Admin/updatesignup");
@@ -21,18 +21,18 @@ router.post("/", (req, res) => {
   } = req.body;
   getData = () => {
     return {
-    customerID,
-    email,
-    account,
-    name,
-    gender,
-    aadhar,
-    pan,
-    totalAmount,
-    DOB,
-    errors,
+      customerID,
+      email,
+      account,
+      name,
+      gender,
+      aadhar,
+      pan,
+      totalAmount,
+      DOB,
+      errors,
     };
-  }
+  };
   let errors = [];
   if (!name || !email || !account) {
     errors = [];
@@ -46,11 +46,10 @@ router.post("/", (req, res) => {
     });
     res.render("./Admin/updatesignup", getData());
   }
-  if(totalAmount < 0)
-  {
+  if (totalAmount <= 0) {
     errors = [];
     errors.push({
-      msg: "Balance cannot be negative",
+      msg: "Balance cannot be negative or 0",
     });
     res.render("./Admin/updatesignup", getData());
   }
@@ -60,32 +59,28 @@ router.post("/", (req, res) => {
   } else {
     User.findOneAndDelete({ customerID }).then(() => {
       User.findOne({ account }).then((user) => {
-        if (user) { 
+        if (user) {
           errors.push({ msg: "Account no already exist" });
           res.render("./Admin/updatesignup", getData());
-        }
-        else {
+        } else {
           User.findOne({ email }).then((user) => {
             if (user) {
               errors = [];
-              errors.push({ msg: "email already exist" });
+              errors.push({ msg: "Email already exist" });
               res.render("./Admin/updatesignup", getData());
-            }
-            else {
+            } else {
               User.findOne({ pan }).then((user) => {
-                if (user) { 
+                if (user) {
                   errors = [];
                   errors.push({ msg: "Pan no already exist" });
                   res.render("./Admin/updatesignup", getData());
-                }
-                else {
+                } else {
                   User.findOne({ aadhar }).then((user) => {
                     if (user) {
                       errors = [];
-                      errors.push({ msg: "aadhar no already exist" });
+                      errors.push({ msg: "Aadhar no already exist" });
                       res.render("./Admin/updatesignup", getData());
-                    }
-                    else {
+                    } else {
                       const user = new User({
                         customerID,
                         name,
@@ -116,20 +111,5 @@ router.post("/", (req, res) => {
     });
   }
 });
-// router.post("/" , (req,res) => {
-//   const {customerID,email,account,name,gender,aadhar,pan,balance}=req.body;
-//   let errors = [];
-//   if (!name || !email || !account) {
-//     errors.push({ msg: "Please fill all the details" });
-//   }
-//   if (account.length != 10) {
-//     errors.push({
-//       msg: "Please enter 10 digit account number",
-//     });
-//   }
-//   if (errors.length > 0) {
-//     res.render("Signup/page1", { errors, name, email, account });
-//   }
-// })
 
 module.exports = router;

@@ -22,18 +22,6 @@ a {
   left: 90%;
   top: 5%;
 }
-.deletebox {
-  border-radius: 20px;
-  border: 2px solid white;
-  position: absolute;
-  background-color: rgba(44, 35, 35, 0.952);
-  height: 35%;
-  width: 30%;
-  top: 40%;
-  left: 32%;
-  z-index: 1;
-  padding-top: 9%;
-}
 .confirmation {
   position: absolute;
   color: aliceblue;
@@ -66,4 +54,16 @@ a {
   left: 13%;
   top: 4%;
   width: 75%;
+}
+.deletebox {
+  border-radius: 20px;
+  border: 2px solid white;
+  position: fixed;
+  top: 30%;
+  background-color: rgba(44, 35, 35, 0.952);
+  height: 35%;
+  width: 30%;
+  left: 32%;
+  z-index: 1;
+  padding-top: 9%;
 }
