@@ -4,7 +4,7 @@ const router = express.Router();
 let errors = [];
 
 router.get("/", (req, res) => {
-  res.render("./Admin/updatesignup");
+  res.render("./Admin/updateSignup");
 });
 
 router.post("/", (req, res) => {
@@ -37,21 +37,21 @@ router.post("/", (req, res) => {
   if (!name || !email || !account) {
     errors = [];
     errors.push({ msg: "Please fill all the details" });
-    res.render("./Admin/updatesignup", getData());
+    res.render("./Admin/updateSignup", getData());
   }
   if (account.length != 10) {
     errors = [];
     errors.push({
       msg: "Please enter 10 digit account number",
     });
-    res.render("./Admin/updatesignup", getData());
+    res.render("./Admin/updateSignup", getData());
   }
   if (totalAmount <= 0) {
     errors = [];
     errors.push({
       msg: "Balance cannot be negative or 0",
     });
-    res.render("./Admin/updatesignup", getData());
+    res.render("./Admin/updateSignup", getData());
   }
   if (errors.length > 0) {
     res.render("/updatesignup", { errors, name, email, account });
@@ -61,25 +61,25 @@ router.post("/", (req, res) => {
       User.findOne({ account }).then((user) => {
         if (user) {
           errors.push({ msg: "Account no already exist" });
-          res.render("./Admin/updatesignup", getData());
+          res.render("./Admin/updateSignup", getData());
         } else {
           User.findOne({ email }).then((user) => {
             if (user) {
               errors = [];
               errors.push({ msg: "Email already exist" });
-              res.render("./Admin/updatesignup", getData());
+              res.render("./Admin/updateSignup", getData());
             } else {
               User.findOne({ pan }).then((user) => {
                 if (user) {
                   errors = [];
                   errors.push({ msg: "Pan no already exist" });
-                  res.render("./Admin/updatesignup", getData());
+                  res.render("./Admin/updateSignup", getData());
                 } else {
                   User.findOne({ aadhar }).then((user) => {
                     if (user) {
                       errors = [];
                       errors.push({ msg: "Aadhar no already exist" });
-                      res.render("./Admin/updatesignup", getData());
+                      res.render("./Admin/updateSignup", getData());
                     } else {
                       const user = new User({
                         customerID,
