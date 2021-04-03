@@ -19,7 +19,7 @@ table {
 }
 a {
   position: absolute;
-  left: 90%;
+  left: 5%;
   top: 5%;
 }
 .confirmation {
@@ -66,4 +66,9 @@ a {
   left: 35%;
   z-index: 1;
   padding-top: 8%;
+}
+.refresh {
+  position: absolute;
+  left: 90%;
+  top: 5%;
 }

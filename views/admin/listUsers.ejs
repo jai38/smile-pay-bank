@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smile-Pay_bank</title>
+    <title>Smile-Pay</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -16,15 +16,16 @@
       href="./../../css/Admin/updateUser.css"
       type="text/css"
     />
-    <script src="./../../clientJS/Admin/updateUser.js"></script>
+    <script src="./../../clientJS/Admin/listUsers.js"></script>
   </head>
-  <body onload="updateUser()">
+  <body onload="listUsers()">
     <h4 class="updateUserHeading">SMILE PAY BANK</h4>
-    <a href="/adminDashboard" onclick="logout()" class="btn btn-dark btn-lg"
+    <a
+      href="/adminDashboard"
+      onclick="logout()"
+      class="logout btn btn-dark btn-lg"
       >Back</a
     >
-    <button class="refresh btn btn-dark btn-lg" type="submit">Refresh</button>
-
     <table class="table table-striped" style="width: 80%">
       <thead class="table-dark">
         <tr>
@@ -37,7 +38,6 @@
           <th scope="col">Aadhar</th>
           <th scope="col">PAN</th>
           <th scope="col">Balance</th>
-          <th scope="col">UPDATE</th>
         </tr>
       </thead>
       <tbody id="tableData" class="table-light"></tbody>
