@@ -41,8 +41,9 @@ app.use("/updateUser", require("./routes/Admin/updateUser"));
 app.use("/addUser", require("./routes/Admin/addUser"));
 app.use("/adminDashboard", require("./routes/Admin/adminDashboard"));
 app.use("/deleteUser", require("./routes/Admin/deleteUser"));
-app.use("/updateSignup", require("./routes/Admin/updateSignup"));
 app.use("/listUsers", require("./routes/Admin/listUsers"));
+app.use("/updatesignup", require("./routes/Admin/updatesignup"));
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, console.log(`Server is running on port ${PORT}`));

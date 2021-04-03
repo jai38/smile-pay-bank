@@ -63,7 +63,7 @@
                   value="<%= typeof name != 'undefined' ? name : '' %>"
                 />
               </div>
-              <div class="col-sm-6 my-1">
+              <!-- <div class="col-sm-6 my-1">
                 <label for="exampleInputAccountno">Gender:</label>
                 <input
                   required
@@ -73,20 +73,32 @@
                   id="gender"
                   placeholder="Male"
                   value="<%= typeof gender != 'undefined' ? gender : '' %>"
-                />
-              </div>
+                /> -->
+                <div class="col-sm-6 my-1">
+                  <label for="exampleInputpassword1">DOB:</label>
+                  <input
+                    required
+                    type="date"
+                    class="form-control"
+                    name="DOB"
+                    id="DOB"
+                    placeholder="dd-mm-yyyy"
+                    value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
+                  />
+                </div>
+              
             </div>
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputpassword1">DOB:</label>
+                <label for="exampleInputmobilenumber">DOB:</label>
                 <input
                   required
-                  type="date"
+                  type="Number"
                   class="form-control"
-                  name="DOB"
-                  id="DOB"
-                  placeholder="dd-mm-yyyy"
-                  value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
+                  name="Mobile number"
+                  id="mobile number"
+                  placeholder="8793993450"
+                  value="<%= typeof mobileNumber != 'undefined' ? mobileNumber : '' %>"
                 />
               </div>
               <div class="col-sm-6 my-1">
@@ -130,6 +142,18 @@
               </div>
             </div>
             <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputAccountno">Gender:</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  name="gender"
+                  id="gender"
+                  placeholder="M/F/T"
+                  value="<%= typeof gender != 'undefined' ? gender : '' %>"
+                />
+                </div>
               <div class="col-sm-6 my-1">
                 <label for="exampleInputemail1">Balance:</label>
                 <input

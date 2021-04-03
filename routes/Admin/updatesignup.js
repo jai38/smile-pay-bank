@@ -16,7 +16,7 @@ router.post("/", (req, res) => {
     gender,
     aadhar,
     pan,
-    totalAmount,
+    totalAmount, 
     DOB,
   } = req.body;
   getData = () => {
