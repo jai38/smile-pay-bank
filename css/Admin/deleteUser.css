@@ -67,3 +67,8 @@ a {
   z-index: 1;
   padding-top: 8%;
 }
+.refresh {
+  position: absolute;
+  left: 90%;
+  top: 5%;
+}
