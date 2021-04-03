@@ -22,7 +22,13 @@ const sendEmail = (email) => {
     subject: "Welcome to Smile Pay",
     html: `
     <pre style='font-family: Arial, Helvetica, sans-serif;'>
-    You are regitisted at our site
+You are successfully registered on Smile-Pay.
+Thank you ${name}, for being a valued member of Smile Pay.
+Please Sign Up to Connect to our website.
+Link to our website : <a href="https://smile-pay.herokuapp.com/"> SmilePay </a>
+
+<b>Kind regards,</b>
+<b>Smile-Pay Team.</b>
     </pre>`,
   };
   transporter.sendMail(mailOptions, (err, info) => {
