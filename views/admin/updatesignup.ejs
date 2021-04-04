@@ -29,7 +29,7 @@
         <div class="logo">
           <span class="icon"></span>
         </div>
-        <form action="/updatesignup" method="POST" onsubmit="modifyData()">
+        <form action="/updatesignup" method="POST">
           <%- include('../partials/messages') %>
           <div class="flexbox d-flex flex-column block-example">
             <div class="form-row">
@@ -246,6 +246,7 @@
               <button
                 type="submit"
                 class="signupAdd btn btn-success btn-lg mt-3"
+                onsubmit="modifyData()"
               >
                 UPDATE
               </button>
