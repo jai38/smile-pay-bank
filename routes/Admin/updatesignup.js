@@ -96,7 +96,7 @@ router.post("/", (req, res) => {
                       user.save().then(() => {
                         errors.push({
                           msg:
-                            "Updated Succcessfully, You have been logged out",
+                            "Updated Succcessfully, click on the Refresh Button to get the changes",
                         });
                         let allUsers = [];
                         User.find().then((users) => {

@@ -1,3 +1,5 @@
+@import url("./../Global/global.css");
+
 body {
   background-repeat: no-repeat;
   background-size: 100%;
@@ -24,4 +26,18 @@ a {
   position: absolute;
   left: 90%;
   top: 5%;
+}
+.alert {
+  position: absolute;
+  left: 13%;
+  top: 4%;
+  width: 75%;
+}
+.close {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 4%;
+  top: 3%;
+  text-decoration: none;
+  font-size: 200%;
 }
