@@ -18,7 +18,6 @@ router.post("/", (req, res) => {
     pan,
     totalAmount, 
     DOB,
-    mobileNo,
   } = req.body;
   getData = () => {
     return {
@@ -31,7 +30,6 @@ router.post("/", (req, res) => {
       pan,
       totalAmount,
       DOB,
-      mobileNo,
       errors,
     };
   };
@@ -83,53 +81,25 @@ router.post("/", (req, res) => {
                       errors.push({ msg: "Aadhar no already exist" });
                       res.render("./Admin/updatesignup", getData());
                     } else {
-                      User.findOne({ mobileNo }).then((user) =>{
-                        if(user){
-                          errors = [];
-                          error.push({ msg: "Mobile Number already exist"});
-                          res.render("./Admin/updatesignup", getData());
-                        }
-                        else{
-                          const user = new User({
-                            customerID,
-                            name,
-                            email,
-                            aadhar,
-                            pan,
-                            account,
-                            totalAmount,
-                            gender,
-                            DOB,
-                          });
-                          console.log(user);
-                          user.save().then(() => {
-                            errors.push({
-                              msg:
-                                "Updated Succcessfully, You have been logged out",
-                            });
-                            res.render("Admin/updateUser", { errors });
-                          });
-                        }
-                      })
-                      // const user = new User({
-                      //   customerID,
-                      //   name,
-                      //   email,
-                      //   aadhar,
-                      //   pan,
-                      //   account,
-                      //   totalAmount,
-                      //   gender,
-                      //   DOB,
-                      // });
-                      // console.log(user);
-                      // user.save().then(() => {
-                      //   errors.push({
-                      //     msg:
-                      //       "Updated Succcessfully, You have been logged out",
-                      //   });
-                      //   res.render("Admin/updateUser", { errors });
-                      // });
+                      const user = new User({
+                        customerID,
+                        name,
+                        email,
+                        aadhar,
+                        pan,
+                        account,
+                        totalAmount,
+                        gender,
+                        DOB,
+                      });
+                      console.log(user);
+                      user.save().then(() => {
+                        errors.push({
+                          msg:
+                            "Updated Succcessfully, You have been logged out",
+                        });
+                        res.render("Admin/updateUser", { errors });
+                      });
                     }
                   });
                 }

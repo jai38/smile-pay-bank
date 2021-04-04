@@ -20,9 +20,8 @@
       href="./../../css/Admin/updateSignup.css"
       type="text/css"
     />
-    <script src="./../../clientJS/Admin/updatesignup.js"></script>
   </head>
-  <body onload="getFilledData()">
+  <body>
     <div class="background">
       <div class="backgroundImgFirst"></div>
       <div class="floatBox">
@@ -34,7 +33,7 @@
           <div class="flexbox d-flex flex-column block-example">
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputFirst1">Customer ID :</label>
+                <label for="exampleInputFirst1">Customer ID:</label>
                 <input
                   type="Number"
                   class="form-control"
@@ -53,7 +52,7 @@
                 ></div>
               </div>
               <div class="col-sm-6 my-1">
-                <label for="exampleInputLast1">Account :</label>
+                <label for="exampleInputLast1">Account:</label>
                 <input
                   required
                   type="Number"
@@ -75,7 +74,7 @@
             </div>
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputUser1">Name :</label>
+                <label for="exampleInputUser1">Name:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -94,7 +93,29 @@
                 ></div>
               </div>
               <div class="col-sm-6 my-1">
-                <label for="exampleInputpassword1">DOB :</label>
+                <label for="exampleInputAccountno">Gender:</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  name="gender"
+                  id="gender"
+                  value="<%= typeof gender != 'undefined' ? gender : '' %>"
+                  style="display: none"
+                />
+                <div
+                  type="text"
+                  name="gender"
+                  id="gender1"
+                  value="<%= typeof gender != 'undefined' ? gender : '' %>"
+                  onclick="changeDisplay(id)"
+                  class="inputDiv"
+                ></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputpassword1">DOB:</label>
                 <input
                   required
                   type="date"
@@ -112,29 +133,8 @@
                   class="inputDiv"
                 ></div>
               </div>
-            </div>
-            <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputpassword1">Mobile Number :</label>
-                <input
-                  required
-                  type="Number"
-                  class="form-control"
-                  name="Mobile Number"
-                  id="mobileNo"
-                  value="<%= typeof mobileNumber != 'undefined' ? mobileNumber : '' %>"
-                  style="display: none"
-                />
-                <div
-                  name="Mobile Number"
-                  id="mobileNo1"
-                  value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
-                  onclick="changeDisplay(id)"
-                  class="inputDiv"
-                ></div>
-              </div>
-              <div class="col-sm-6 my-1">
-                <label for="exampleInputconfirmPassword1">Email :</label>
+                <label for="exampleInputconfirmPassword1">Email:</label>
                 <input
                   required
                   type="email"
@@ -156,7 +156,7 @@
             </div>
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputemail1">Aadhar :</label>
+                <label for="exampleInputemail1">Aadhar:</label>
                 <input
                   required
                   type="Number"
@@ -176,7 +176,7 @@
                 ></div>
               </div>
               <div class="col-sm-6 my-1">
-                <label for="exampleInputconfirmPassword1">PAN :</label>
+                <label for="exampleInputconfirmPassword1">PAN:</label>
                 <input
                   required
                   type="text"
@@ -198,27 +198,7 @@
             </div>
             <div class="form-row">
               <div class="col-sm-6 my-1">
-                <label for="exampleInputAccountno">Gender :</label>
-                <input
-                  required
-                  type="text"
-                  class="form-control"
-                  name="gender"
-                  id="gender"
-                  value="<%= typeof gender != 'undefined' ? gender : '' %>"
-                  style="display: none"
-                />
-                <div
-                  type="text"
-                  name="gender"
-                  id="gender1"
-                  value="<%= typeof gender != 'undefined' ? gender : '' %>"
-                  onclick="changeDisplay(id)"
-                  class="inputDiv"
-                ></div>
-              </div>
-              <div class="col-sm-6 my-1">
-                <label for="exampleInputemail1">Balance :</label>
+                <label for="exampleInputemail1">Balance:</label>
                 <input
                   class="form-control"
                   required
@@ -256,5 +236,5 @@
       <div class="backgroundImgSecond"></div>
     </div>
   </body>
-  <!-- <script src="./../../clientJS/Admin/updatesignup.js"></script> -->
+  <script src="./../../clientJS/Admin/updatesignup.js"></script>
 </html>

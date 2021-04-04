@@ -42,9 +42,4 @@ changeDisplay = (id) => {
         document.getElementById("totalAmount").style.display="block";
         // document.getElementById("totalAmount").value=user.balance;
     }
-    if(id=="mobileNo1"){
-        document.getElementById(id).style.display="none";
-        document.getElementById("mobileNo").style.display="block";
-        // document.getElementById("pan").value=user.pan;
-    }
 }
