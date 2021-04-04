@@ -1,3 +1,8 @@
+const modifyData = async () => {
+  let allUsers = document.getElementById("allUsers").value;
+  if (allUsers.length > 10) localStorage.setItem("allUsers", allUsers);
+  window.location.reload();
+};
 getUpdate = (customerID) => {
   let result = [];
   result = localStorage.getItem("allUsers");
@@ -15,6 +20,7 @@ updateUser = () => {
   allUsers = JSON.parse(allUsers);
   let tableHTML = "";
   let tableDetails = document.getElementById("tableData");
+  allUsers.sort((a, b) => a.customerID - b.customerID);
   allUsers.forEach((c) => {
     if (c.customerID != undefined) {
       tableHTML += `<tr>
@@ -27,7 +33,9 @@ updateUser = () => {
         <th scope="col">${c.aadhar}</th>
         <th scope="col">${c.pan}</th>
         <th scope="col">${c.balance}</th>
-        <th scope="col"><button class="btn btn-dark" onclick="getUpdate(${c.customerID})">UPDATE</button></th>
+        <th scope="col"><button class="btn btn-dark" onclick="getUpdate(${
+          c.customerID
+        })">UPDATE</button></th>
       </tr>`;
     }
   });

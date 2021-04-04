@@ -16,7 +16,7 @@ router.post("/", (req, res) => {
     gender,
     aadhar,
     pan,
-    totalAmount, 
+    totalAmount,
     DOB,
   } = req.body;
   getData = () => {
@@ -98,7 +98,27 @@ router.post("/", (req, res) => {
                           msg:
                             "Updated Succcessfully, You have been logged out",
                         });
-                        res.render("Admin/updateUser", { errors });
+                        let allUsers = [];
+                        User.find().then((users) => {
+                          users.forEach((c) => {
+                            let currentUser = {
+                              customerID: c.customerID,
+                              account: c.account,
+                              name: c.name,
+                              gender: c.gender,
+                              DOB: c.DOB,
+                              email: c.email,
+                              aadhar: c.aadhar,
+                              pan: c.pan,
+                              balance: c.totalAmount,
+                            };
+                            allUsers.push(currentUser);
+                          });
+                          res.render("Admin/updateUser", {
+                            errors,
+                            allUsers: JSON.stringify(allUsers),
+                          });
+                        });
                       });
                     }
                   });

@@ -20,13 +20,21 @@
   </head>
   <body onload="updateUser()">
     <h4 class="updateUserHeading">SMILE PAY BANK</h4>
+    <%- include('../partials/messages') %>
     <a href="/adminDashboard" onclick="logout()" class="btn btn-dark btn-lg"
       >Back</a
     >
+    <input
+      type="text"
+      name="allUsers"
+      id="allUsers"
+      value="<%= typeof allUsers != 'undefined' ? allUsers : '' %>"
+      style="display: none"
+    />
     <button
       class="refresh btn btn-dark btn-lg"
       type="button"
-      onclick="location.reload();"
+      onclick="modifyData()"
     >
       Refresh
     </button>
