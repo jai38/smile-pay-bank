@@ -46,6 +46,9 @@ const UserSchema = new mongoose.Schema({
   imgLink: {
     type: String,
   },
+  mobileNo: {
+    type: Number,
+  }
 });
 
 const User = mongoose.model("User", UserSchema);
