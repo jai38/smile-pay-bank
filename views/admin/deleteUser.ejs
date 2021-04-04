@@ -30,7 +30,14 @@
       onclick="logout()"
       class="logout btn btn-dark btn-lg"
       >Back</a>
-      <button class="refresh btn btn-dark btn-lg" type="submit">Refresh</button>
+      <input
+      type="text"
+      name="allUsers"
+      id="allUsers"
+      value="<%= typeof allUsers != 'undefined' ? allUsers : '' %>"
+      style="display: none"
+    />
+      <button class="refresh btn btn-dark btn-lg" type="button" onclick="modifyData()">Refresh</button>
       <div class="deletebox" id="deleteBox" style="display:none">
         <h5 class="confirmation">Are you sure you want to delete the Customer</h5>
         <button class="yesbtn btn-lg" type="submit">Yes</button>

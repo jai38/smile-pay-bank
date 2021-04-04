@@ -1,3 +1,8 @@
+const modifyData = async () => {
+  let allUsers = document.getElementById("allUsers").value;
+  if (allUsers.length > 10) localStorage.setItem("allUsers", allUsers);
+  window.location.reload();
+};
 currentDelete = (account) => {
   let result = [];
   result = localStorage.getItem("allUsers");
@@ -28,7 +33,9 @@ deleteUser = () => {
       <th scope="col">${c.aadhar}</th>
       <th scope="col">${c.pan}</th>
       <th scope="col">${c.balance}</th>
-      <th scope="col"><button class="btn btn-dark" type="button" onclick="currentDelete(${c.account})">DELETE</button></th>
+      <th scope="col"><button class="btn btn-dark" type="button" onclick="currentDelete(${
+        c.account
+      })">DELETE</button></th>
     </tr>`;
   });
   tableDetails.innerHTML = tableHTML;
