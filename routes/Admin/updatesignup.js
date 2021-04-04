@@ -98,7 +98,7 @@ router.post("/", (req, res) => {
                           msg:
                             "Updated Succcessfully, You have been logged out",
                         });
-                        res.render("Main/MainPage", { errors });
+                        res.render("Admin/updateUser", { errors });
                       });
                     }
                   });

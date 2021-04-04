@@ -1,3 +1,32 @@
+const modifyData = async () => {
+  const customerID = document.getElementById("customerID").value;
+  const account = document.getElementById("account").value;
+  const pan = document.getElementById("pan").value;
+  const name = document.getElementById("name").value;
+  const gender = document.getElementById("gender").value;
+  const DOB = document.getElementById("DOB").value;
+  const email = document.getElementById("email").value;
+  const aadhar = document.getElementById("aadhar").value;
+  const totalAmount = document.getElementById("totalAmount").value;
+  let allUsers = JSON.parse(localStorage.getItem("allUsers"));
+  await allUsers.forEach((c) => {
+    if (c.customerID == customerID) {
+      c = {
+        customerID,
+        account,
+        pan,
+        name,
+        gender,
+        DOB,
+        email,
+        aadhar,
+        totalAmount,
+      };
+    }
+  });
+  console.log(allUsers);
+  localStorage.setItem("allUsers", JSON.stringify(allUsers));
+};
 // let user = localStorage.getItem("currentUpdate");
 // user=JSON.parse(user)
 
