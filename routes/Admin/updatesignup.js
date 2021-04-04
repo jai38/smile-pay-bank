@@ -94,6 +94,7 @@ router.post("/", (req, res) => {
                       });
                       console.log(user);
                       user.save().then(() => {
+                        errors = [];
                         errors.push({
                           msg:
                             "Updated Succcessfully, click on the Refresh Button to get the changes",
