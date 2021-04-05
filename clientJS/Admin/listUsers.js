@@ -11,6 +11,7 @@ listUsers = () => {
           <th scope="col">${c.name}</th>
           <th scope="col">${c.gender}</th>
           <th scope="col">${new Date(c.DOB).toLocaleDateString()}</th>
+          <th scope="col">${c.mobileNo}</th>
           <th scope="col">${c.email}</th>
           <th scope="col">${c.aadhar}</th>
           <th scope="col">${c.pan}</th>
