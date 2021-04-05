@@ -21,6 +21,7 @@ deleteUser = () => {
   allUsers = JSON.parse(allUsers);
   let tableHTML = "";
   let tableDetails = document.getElementById("tableData");
+  allUsers.sort((a, b) => a.customerID - b.customerID);
   allUsers.forEach((c) => {
     if (c.customerID != undefined)
       tableHTML += `<tr>

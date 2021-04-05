@@ -18,7 +18,7 @@ router.post("/", (req, res) => {
     pan,
     totalAmount,
     DOB,
-    mobileNo
+    mobileNo,
   } = req.body;
   getData = () => {
     return {
@@ -48,7 +48,7 @@ router.post("/", (req, res) => {
     });
     res.render("./Admin/updatesignup", getData());
   }
-  if(mobileNo.length!=10){
+  if (mobileNo.length != 10) {
     errors = [];
     errors.push({
       msg: "Invalid Mobile Number",
@@ -90,13 +90,12 @@ router.post("/", (req, res) => {
                       errors.push({ msg: "Aadhar no already exist" });
                       res.render("./Admin/updatesignup", getData());
                     } else {
-                      User.findOne({ mobileNo }).then(user => {
-                        if(user){
+                      User.findOne({ mobileNo }).then((user) => {
+                        if (user) {
                           errors = [];
                           errors.push({ msg: "Mobile no already exist" });
                           res.render("./Admin/updatesignup", getData());
-                        }
-                        else{
+                        } else {
                           const user = new User({
                             customerID,
                             name,
@@ -107,7 +106,7 @@ router.post("/", (req, res) => {
                             totalAmount,
                             gender,
                             DOB,
-                            mobileNo
+                            mobileNo,
                           });
                           console.log(user);
                           user.save().then(() => {
@@ -125,6 +124,7 @@ router.post("/", (req, res) => {
                                   name: c.name,
                                   gender: c.gender,
                                   DOB: c.DOB,
+                                  mobileNo: c.mobileNo,
                                   email: c.email,
                                   aadhar: c.aadhar,
                                   pan: c.pan,
@@ -139,7 +139,7 @@ router.post("/", (req, res) => {
                             });
                           });
                         }
-                      })
+                      });
                       // const user = new User({
                       //   customerID,
                       //   name,
