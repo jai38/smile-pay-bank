@@ -18,6 +18,7 @@ router.post("/", (req, res) => {
     pan,
     totalAmount,
     DOB,
+    mobileNo
   } = req.body;
   getData = () => {
     return {
@@ -31,6 +32,7 @@ router.post("/", (req, res) => {
       totalAmount,
       DOB,
       errors,
+      mobileNo,
     };
   };
   let errors = [];
@@ -43,6 +45,13 @@ router.post("/", (req, res) => {
     errors = [];
     errors.push({
       msg: "Please enter 10 digit account number",
+    });
+    res.render("./Admin/updatesignup", getData());
+  }
+  if(mobileNo.length!=10){
+    errors = [];
+    errors.push({
+      msg: "Invalid Mobile Number",
     });
     res.render("./Admin/updatesignup", getData());
   }
@@ -81,46 +90,96 @@ router.post("/", (req, res) => {
                       errors.push({ msg: "Aadhar no already exist" });
                       res.render("./Admin/updatesignup", getData());
                     } else {
-                      const user = new User({
-                        customerID,
-                        name,
-                        email,
-                        aadhar,
-                        pan,
-                        account,
-                        totalAmount,
-                        gender,
-                        DOB,
-                      });
-                      console.log(user);
-                      user.save().then(() => {
-                        errors = [];
-                        errors.push({
-                          msg:
-                            "Updated Succcessfully, click on the Refresh Button to get the changes",
-                        });
-                        let allUsers = [];
-                        User.find().then((users) => {
-                          users.forEach((c) => {
-                            let currentUser = {
-                              customerID: c.customerID,
-                              account: c.account,
-                              name: c.name,
-                              gender: c.gender,
-                              DOB: c.DOB,
-                              email: c.email,
-                              aadhar: c.aadhar,
-                              pan: c.pan,
-                              balance: c.totalAmount,
-                            };
-                            allUsers.push(currentUser);
+                      User.findOne({ mobileNo }).then(user => {
+                        if(user){
+                          errors = [];
+                          errors.push({ msg: "Mobile no already exist" });
+                          res.render("./Admin/updatesignup", getData());
+                        }
+                        else{
+                          const user = new User({
+                            customerID,
+                            name,
+                            email,
+                            aadhar,
+                            pan,
+                            account,
+                            totalAmount,
+                            gender,
+                            DOB,
+                            mobileNo
                           });
-                          res.render("Admin/updateUser", {
-                            errors,
-                            allUsers: JSON.stringify(allUsers),
+                          console.log(user);
+                          user.save().then(() => {
+                            errors = [];
+                            errors.push({
+                              msg:
+                                "Updated Succcessfully, click on the Refresh Button to get the changes",
+                            });
+                            let allUsers = [];
+                            User.find().then((users) => {
+                              users.forEach((c) => {
+                                let currentUser = {
+                                  customerID: c.customerID,
+                                  account: c.account,
+                                  name: c.name,
+                                  gender: c.gender,
+                                  DOB: c.DOB,
+                                  email: c.email,
+                                  aadhar: c.aadhar,
+                                  pan: c.pan,
+                                  balance: c.totalAmount,
+                                };
+                                allUsers.push(currentUser);
+                              });
+                              res.render("Admin/updateUser", {
+                                errors,
+                                allUsers: JSON.stringify(allUsers),
+                              });
+                            });
                           });
-                        });
-                      });
+                        }
+                      })
+                      // const user = new User({
+                      //   customerID,
+                      //   name,
+                      //   email,
+                      //   aadhar,
+                      //   pan,
+                      //   account,
+                      //   totalAmount,
+                      //   gender,
+                      //   DOB,
+                      // });
+                      // console.log(user);
+                      // user.save().then(() => {
+                      //   errors = [];
+                      //   errors.push({
+                      //     msg:
+                      //       "Updated Succcessfully, click on the Refresh Button to get the changes",
+                      //   });
+                      //   let allUsers = [];
+                      //   User.find().then((users) => {
+                      //     users.forEach((c) => {
+                      //       let currentUser = {
+                      //         customerID: c.customerID,
+                      //         account: c.account,
+                      //         name: c.name,
+                      //         gender: c.gender,
+                      //         DOB: c.DOB,
+                      //         email: c.email,
+                      //         aadhar: c.aadhar,
+                      //         pan: c.pan,
+                      //         balance: c.totalAmount,
+                      //       };
+                      //       allUsers.push(currentUser);
+                      //     });
+                      //     res.render("Admin/updateUser", {
+                      //       errors,
+                      //       allUsers: JSON.stringify(allUsers),
+                      //     });
+                      //   });
+                      // });
                     }
                   });
                 }

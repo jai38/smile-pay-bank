@@ -31,4 +31,6 @@ document.getElementById("DOB").value = user.DOB;
 document.getElementById("email").value = user.email;
 document.getElementById("aadhar").value = user.aadhar;
 document.getElementById("totalAmount").value = user.balance;
+document.getElementById("mobileNo").value = user.mobileNo;
+document.getElementById("mobileNo1").value = user.mobileNo;
 // document.getElementById("name").value=user.name;

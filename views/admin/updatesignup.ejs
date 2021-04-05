@@ -92,7 +92,7 @@
                   class="inputDiv"
                 ></div>
               </div>
-              <div class="col-sm-6 my-1">
+              <!-- <div class="col-sm-6 my-1">
                 <label for="exampleInputAccountno">Gender:</label>
                 <input
                   required
@@ -111,9 +111,7 @@
                   onclick="changeDisplay(id)"
                   class="inputDiv"
                 ></div>
-              </div>
-            </div>
-            <div class="form-row">
+              </div> -->
               <div class="col-sm-6 my-1">
                 <label for="exampleInputpassword1">DOB:</label>
                 <input
@@ -129,6 +127,27 @@
                   name="DOB"
                   id="DOB1"
                   value="<%= typeof DOB != 'undefined' ? DOB : '' %>"
+                  onclick="changeDisplay(id)"
+                  class="inputDiv"
+                ></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputpassword1">Mobile Number:</label>
+                <input
+                  required
+                  type="Number"
+                  class="form-control"
+                  name="mobileNo"
+                  id="mobileNo"
+                  value="<%= typeof mobileNo != 'undefined' ? mobileNo : '' %>"
+                  style="display: none"
+                />
+                <div
+                  name="mobileNo"
+                  id="mobileNo1"
+                  value="<%= typeof mobileNo != 'undefined' ? mobileNo : '' %>"
                   onclick="changeDisplay(id)"
                   class="inputDiv"
                 ></div>
@@ -197,6 +216,26 @@
               </div>
             </div>
             <div class="form-row">
+              <div class="col-sm-6 my-1">
+                <label for="exampleInputAccountno">Gender:</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  name="gender"
+                  id="gender"
+                  value="<%= typeof gender != 'undefined' ? gender : '' %>"
+                  style="display: none"
+                />
+                <div
+                  type="text"
+                  name="gender"
+                  id="gender1"
+                  value="<%= typeof gender != 'undefined' ? gender : '' %>"
+                  onclick="changeDisplay(id)"
+                  class="inputDiv"
+                ></div>
+              </div>
               <div class="col-sm-6 my-1">
                 <label for="exampleInputemail1">Balance:</label>
                 <input

@@ -8,7 +8,7 @@ let errors = [];
 router.get("/", (req, res) => {
   res.render("./Admin/addUser");
 });
-const sendEmail = (email) => {
+const sendEmail = (email, name) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -50,6 +50,7 @@ router.post("/", (req, res) => {
     totalAmount,
     gender,
     DOB,
+    mobileNo
   } = req.body;
   customerID = customerID.toString();
   getData = () => {
@@ -64,6 +65,7 @@ router.post("/", (req, res) => {
       gender,
       DOB,
       errors,
+      mobileNo,
     };
   };
   if (aadhar.length != 12) {
@@ -117,6 +119,11 @@ router.post("/", (req, res) => {
           errors.push({ msg: "Pan number is already in our database" });
           res.render("./Admin/addUser", getData());
         }
+        else if (user.mobileNo == mobileNo) {
+          errors = [];
+          errors.push({ msg: "Pan number is already in our database" });
+          res.render("./Admin/addUser", getData());
+        }
       } else {
         const user = new User({
           customerID,
@@ -128,13 +135,14 @@ router.post("/", (req, res) => {
           totalAmount,
           gender,
           DOB,
+          mobileNo
         });
         user.save().then(() => {
           errors = [];
           errors.push({
             msg: "User added successfully,please relogin to see the changes",
           });
-          sendEmail(email);
+          sendEmail(email, name);
           res.render("Main/MainPage", { errors });
         });
       }
