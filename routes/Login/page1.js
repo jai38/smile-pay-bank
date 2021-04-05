@@ -36,6 +36,7 @@ router.post("/", (req, res) => {
               name: c.name,
               gender: c.gender,
               DOB: c.DOB,
+              mobileNo: c.mobileNo,
               email: c.email,
               aadhar: c.aadhar,
               pan: c.pan,

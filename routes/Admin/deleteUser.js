@@ -27,6 +27,7 @@ router.post("/", (req, res) => {
           email: c.email,
           aadhar: c.aadhar,
           pan: c.pan,
+          mobileNo: c.mobileNo,
           balance: c.totalAmount,
         };
         allUsers.push(currentUser);

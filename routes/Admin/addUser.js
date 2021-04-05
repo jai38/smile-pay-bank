@@ -50,7 +50,7 @@ router.post("/", (req, res) => {
     totalAmount,
     gender,
     DOB,
-    mobileNo
+    mobileNo,
   } = req.body;
   customerID = customerID.toString();
   getData = () => {
@@ -118,10 +118,9 @@ router.post("/", (req, res) => {
           errors = [];
           errors.push({ msg: "Pan number is already in our database" });
           res.render("./Admin/addUser", getData());
-        }
-        else if (user.mobileNo == mobileNo) {
+        } else if (user.mobileNo == mobileNo) {
           errors = [];
-          errors.push({ msg: "Pan number is already in our database" });
+          errors.push({ msg: "Mobile number is already in our database" });
           res.render("./Admin/addUser", getData());
         }
       } else {
@@ -135,7 +134,7 @@ router.post("/", (req, res) => {
           totalAmount,
           gender,
           DOB,
-          mobileNo
+          mobileNo,
         });
         user.save().then(() => {
           errors = [];
