@@ -2,11 +2,11 @@
 // user=JSON.parse(user)
 
 changeDisplay = (id) => {
-    if(id=="account1"){
-    document.getElementById(id).style.display="none";
-    document.getElementById("account").style.display="block";
-    // document.getElementById("account").value=user.account;
-    }
+    // if(id=="account1"){
+    // document.getElementById(id).style.display="none";
+    // document.getElementById("account").style.display="block";
+    // // document.getElementById("account").value=user.account;
+    // }
     if(id=="pan1"){
         document.getElementById(id).style.display="none";
         document.getElementById("pan").style.display="block";
