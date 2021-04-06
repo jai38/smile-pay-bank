@@ -32,13 +32,13 @@ a {
 .yesbtn {
   position: relative;
   top: 10%;
-  left: 15%;
+  left: 12%;
   margin: 2%;
 }
 .nobtn {
   position: relative;
   top: 10%;
-  left: 50%;
+  left: 45%;
   margin: 2%;
 }
 .close {
@@ -61,7 +61,7 @@ a {
   position: fixed;
   top: 30%;
   background-color: rgba(44, 35, 35, 0.952);
-  height: 30%;
+  height: 40%;
   width: 30%;
   left: 35%;
   z-index: 1;
@@ -72,3 +72,15 @@ a {
   left: 90%;
   top: 5%;
 }
+.glyphicon {
+  color: aliceblue;
+  left: 43%;
+}
+/* .feedback {
+  top: 80%;
+} */
+
+/* input {
+  position: relative;
+  top: 60%;
+} */
