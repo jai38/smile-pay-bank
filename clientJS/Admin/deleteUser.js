@@ -13,7 +13,7 @@ currentDelete = (account) => {
       document.getElementById("remove").value = JSON.stringify(c);
     }
   });
-  document.getElementById("deleteBox").style.display = "block";
+  document.getElementById("deleteBox").style.display = "flex";
 };
 
 deleteUser = () => {
@@ -35,7 +35,7 @@ deleteUser = () => {
       <th scope="col">${c.aadhar}</th>
       <th scope="col">${c.pan}</th>
       <th scope="col">${c.balance}</th>
-      <th scope="col"><button class="btn btn-dark" type="button" onclick="currentDelete(${
+      <th scope="col"><button class="btn btn-dark text-white" type="button" onclick="currentDelete(${
         c.account
       })">DELETE</button></th>
     </tr>`;

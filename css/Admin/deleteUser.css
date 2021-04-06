@@ -4,6 +4,8 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: rgb(5, 140, 250);
+  margin: 0%;
+  padding: 0%;
 }
 .updateUserHeading {
   text-align: center;
@@ -41,12 +43,12 @@ a {
   left: 45%;
   margin: 2%;
 }
-.close {
-  color: rgb(255, 255, 255);
-  position: absolute;
-  right: 4%;
-  top: 3%;
-  text-decoration: none;
+.close-btn {
+  /* color: rgb(255, 255, 255); */
+  position: relative;
+  left: 88%;
+  width: 10%;
+  /* text-decoration: none; */
   font-size: 200%;
 }
 .alert {
@@ -56,26 +58,25 @@ a {
   width: 75%;
 }
 .deletebox {
+  display: flex;
   border-radius: 20px;
   border: 2px solid rgb(5, 5, 5);
   position: fixed;
   top: 30%;
   background-color: rgba(44, 35, 35, 0.952);
-  height: 40%;
   width: 30%;
   left: 35%;
   z-index: 1;
-  padding-top: 8%;
 }
 .refresh {
   position: absolute;
   left: 90%;
   top: 5%;
 }
-.glyphicon {
+/* .glyphicon {
   color: aliceblue;
   left: 43%;
-}
+} */
 /* .feedback {
   top: 80%;
 } */
