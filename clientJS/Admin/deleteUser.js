@@ -33,7 +33,7 @@ deleteUser = () => {
       <th scope="col">${c.mobileNo}</th>
       <th scope="col">${c.email}</th>
       <th scope="col">${c.aadhar}</th>
-      <th scope="col">${c.pan}</th>
+      <th scope="col">${c.pan.toUpperCase()}</th>
       <th scope="col">${c.balance}</th>
       <th scope="col"><button class="btn btn-dark text-white" type="button" onclick="currentDelete(${
         c.account
